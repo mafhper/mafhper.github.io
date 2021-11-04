@@ -1,4 +1,7 @@
-# `Hello World`
+
+![Logo](/assets/images/logo_circle.svg "Logo")
+
+# `Hello World!`
 
 * ## This is not a website
 
