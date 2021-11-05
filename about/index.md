@@ -1,4 +1,4 @@
-# About what?!
+# About what?
 
 * ## This is not a website
 
