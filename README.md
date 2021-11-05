@@ -12,4 +12,4 @@
 
 &nbsp;
 
-![Logo](/images/logo_circle.svg "Logo")
+![Logo](images/logo_circle.svg "Logo")
