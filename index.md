@@ -14,7 +14,7 @@
 
 * ## This is not a job offer\: [![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&)](https://www.linkedin.com/in/matheuspereiralima/)
 
-* ## This is not a list\.
+* ## This is not [about](https://mafhper.github.io/about/)\.
 
 <!--
 Hi! This is an easter egg.
