@@ -1,9 +1,3 @@
 # About what?
 
-* ## This is not a website
-
-* ## This is not a list
-
-* ## This is not :bird: [@mafhper](https://twitter.com/mafhper)
-
-* ## This is not :camera: [@mafhper](https://instagram.com/mafhper)
+[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=mafhper&hide=stars,prs&show_icons=true&theme=github_dark)](https://github.com/anuraghazra/github-readme-stats)

@@ -13,3 +13,11 @@ body{background-color:#387af2;font:600 1.375em/1.38 'Open Sans';color:rgb(255, 2
 .image{display:block;width:250px;height:auto;margin:0 auto;overflow:hidden;}
 
 .body strong{font-weight:400;}
+
+.cursor{display:inline-block;font-size:0.909em;font-weight:300;line-height:1.38;color:rgb(255, 255, 255);}
+
+.cursor::after{content: "";position: absolute;top: 0;right: -15px;display: inline-block;background-color: #606060;vertical-align: top;width: 5px;height: 24px;-webkit-animation:blink 1.0s step-end infinite;animation:blink 1.0s step-end infinite;}
+
+@-webkit-keyframes cursor{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
+
+@keyframes cursor{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
