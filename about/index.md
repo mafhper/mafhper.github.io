@@ -2,12 +2,14 @@
 
 ## Study
 
-### [Code](https://github.com/mafhper/study/tree/main/CODE)
+### [Code](https://github.com/mafhper/study/tree/main/code-resource)
 
-### [Design](https://github.com/mafhper/study/tree/main/Design)
+### [Design](https://github.com/mafhper/study/tree/main/design-resource)
 
-### [Eletronics](https://github.com/mafhper/study/tree/main/DIY)
+### [DIY](https://github.com/mafhper/study/tree/main/do-it-yourself)
+
+### [Eletronics](https://github.com/mafhper/study/tree/main/eletronic-resource)
 
 &nbsp;
 
-[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=mafhper&hide=stars,prs&show_icons=true&theme=github_dark)](https://github.com/anuraghazra/github-readme-stats)
+[![My GitHub stats](https://github-readme-stats.vercel.app/api?username=mafhper&hide=stars,prs&show_icons=true&theme=github_dark)](https://github.com/mafhper)
