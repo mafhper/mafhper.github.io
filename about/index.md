@@ -2,13 +2,13 @@
 
 ## Study
 
-### [Code](https://github.com/mafhper/study/tree/main/code-resource)
+### [Code Resources](https://github.com/mafhper/study/tree/main/code-resources)
 
-### [Design](https://github.com/mafhper/study/tree/main/design-resource)
+### [Design Topics](https://github.com/mafhper/study/tree/main/design-topics)
 
 ### [DIY](https://github.com/mafhper/study/tree/main/do-it-yourself)
 
-### [Eletronics](https://github.com/mafhper/study/tree/main/eletronic-resource)
+### [Eletronic Workbench](https://github.com/mafhper/study/tree/main/eletronic-workbench)
 
 &nbsp;
 
