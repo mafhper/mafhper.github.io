@@ -1,7 +1,5 @@
 # `Hello World!`
 
-* ## This is not :bird: [@mafhper](https://twitter.com/mafhper)
-
 * ## This is not :camera: [@mafhper](https://instagram.com/mafhper)
 
 * ## This is not a website
