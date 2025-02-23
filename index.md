@@ -1,6 +1,3 @@
----
-@: mafhper
----
 
 # `Hello World`
 
