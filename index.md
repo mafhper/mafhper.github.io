@@ -2,17 +2,16 @@
 @: mafhper
 ---
 
-# `Hello World!`
+# ` | | | | ___| | | ___    \ \      / /__  _ __| | __| |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |
+ |_| |_|\___|_|_|\___/      \_/\_/ \___/|_|  |_|\__,_|`
 
 [![Header](images/logo_circle.svg "Logo")](https://mafhper.github.io/)
 
 * ## This´nt a logo
 
-* ## This is not\: [![image](https://img.shields.io/badge/Twitter-0077B5?style=for-the-badge&logo=twitter&)](https://twitter.com/mafhper)
-
 * ## This is not\: [![image](https://img.shields.io/badge/Instagram-0077B5?style=for-the-badge&logo=instagram&)](https://instagram.com/mafhper)
-
-* ## This is not a job offer\: [![image](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&)](https://www.linkedin.com/in/matheuspereiralima/)
 
 * ## This is not [about](https://mafhper.github.io/about/)\.
 
