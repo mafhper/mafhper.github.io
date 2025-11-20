@@ -277,4 +277,14 @@ h1 {
     h1 { font-size: 1.8rem; }
     .container { padding: 1rem; }
     .grid { grid-template-columns: 1fr; }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .social-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
