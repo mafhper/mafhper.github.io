@@ -1,38 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <title>Fuein | Página não encontrada</title>
-    <meta content="Wow, such much code!" name="description">
-  <meta name="robots" content="index, follow">
-    <!-- <link rel="icon" href="images/favicon-16.png" sizes="16x16">
-    <link rel="icon" href="images/favicon-32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon-72.png">
-    <link rel="icon" href="images/favicon-72.png" sizes="72x72">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon-114.png">
-    <link rel="icon" href="images/favicon-114.png" sizes="114x114">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon-144.png">
-    <link rel="icon" href="images/favicon-144.png" sizes="144x144">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon-152.png">
-    <meta name="msapplication-TileImage" content="images/mstitle.png"/>
-    <meta name="msapplication-TileColor" content="#0084F3"/> -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:600,300,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/standardize.min.css">
-  <link rel="stylesheet" href="css/error.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | SYSTEM ERROR</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" href="assets/images/logo_circle.svg">
+    <style>
+        .error-code {
+            font-size: 5rem;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+            margin: 0;
+            line-height: 1;
+        }
+        .error-message {
+            color: #ff0000;
+            margin-bottom: 2rem;
+        }
+        .trace-log {
+            color: var(--terminal-green);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        .blink-red {
+            animation: blink-red 1s step-end infinite;
+        }
+        @keyframes blink-red {
+            0%, 100% { opacity: 1; color: #ff0000; }
+            50% { opacity: 0; }
+        }
+        .reboot-btn {
+            background: transparent;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            padding: 1rem 2rem;
+            font-family: var(--font-main);
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .reboot-btn:hover {
+            background: #ff0000;
+            color: #000;
+            box-shadow: 0 0 20px #ff0000;
+        }
+    </style>
 </head>
-<body class="body index clearfix">
-  <section class="content clearfix">
-    <h1 class="h1">404</h1>
-    <p class="header">Santo Batman!</p>
-    <a href="http://mafhper.github.io" class="body">Se não fosse o gatinho diria que há algo de muito errado por aqui.&nbsp;<br><strong>Melhor voltarmos para o inicio.</strong></a>
-  </section>
-  <a href="http://mafhper.github.io" class="figure clearfix">
-    <img class="image" src="images/nyan_cat_error.png">
-  </a>
+<body class="crt">
+    <div class="bg-overlay"></div>
+    
+    <div class="container" style="text-align: center; padding-top: 10vh;">
+        <div class="terminal-window" style="border-color: #ff0000; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);">
+            <div class="terminal-header" style="background: #ff0000; color: #000;">
+                <span>FATAL_ERROR.EXE</span>
+                <span>_ [] X</span>
+            </div>
+            <div class="terminal-body">
+                <h1 class="error-code">404</h1>
+                <h2 class="error-message">> CRITICAL SYSTEM FAILURE</h2>
+                
+                <div class="trace-log" style="text-align: left; font-family: monospace; margin: 2rem auto; max-width: 500px;">
+                    <p>> INITIATING SEARCH PROTOCOL...</p>
+                    <p>> SCANNING SECTORS 0x00 - 0xFF...</p>
+                    <p>> ERROR: FILE NOT FOUND AT SPECIFIED ADDRESS</p>
+                    <p>> TRACE ROUTE FAILED.</p>
+                    <p>> CONNECTION LOST.</p>
+                    <p>> <span class="blink-red">_</span></p>
+                </div>
+
+                <a href="index.html" class="reboot-btn">
+                    > REBOOT SYSTEM
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple glitch effect for the title
+        const title = document.querySelector('.error-code');
+        setInterval(() => {
+            if(Math.random() > 0.9) {
+                title.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+                setTimeout(() => {
+                    title.style.transform = 'none';
+                }, 50);
+            }
+        }, 100);
+    </script>
 </body>
 </html>
-
