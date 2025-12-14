@@ -1,265 +1,127 @@
 {
-  "username": "mafhper",
-  "seo": {
-    "title": "My New New Portfolio",
-    "description": "Built with PushMaker",
-    "keywords": [
-      "Portfolio",
-      "Developer",
-      "Web"
-    ],
-    "ogImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-oceanic.svg",
-    "useLogoAsFavicon": true
-  },
-  "header": {
-    "variant": "subtle",
-    "logoSize": 64,
-    "navOrder": [],
-    "height": 96,
-    "blur": 30,
-    "mobileType": "fullscreen",
-    "heroBehavior": "overlay"
-  },
-  "theme": {
-    "metadata": {
-      "id": "terminal",
-      "name": "Terminal",
-      "category": "tech",
-      "author": "PushMaker Team",
-      "description": "Command line inspired interface for developers.",
-      "tags": [
-        "code",
-        "hacker",
-        "green"
-      ],
-      "version": "1.0.0",
-      "createdAt": "2023-12-12"
-    },
-    "typography": {
-      "heading": "JetBrains Mono",
-      "body": "JetBrains Mono",
-      "mono": "JetBrains Mono"
-    },
-    "borderRadius": "4px",
-    "spacing": "compact",
-    "shadows": "none",
-    "animations": "none",
-    "headerStyle": "minimal",
-    "contentWidth": "full",
-    "light": {
-      "colors": {
-        "primary": "#16a34a",
-        "secondary": "#22c55e",
-        "background": "#f0fdf4",
-        "surface": "#dcfce7",
-        "text": "#14532d",
-        "muted": "#4ade80",
-        "accent": "#16a34a"
-      },
-      "effect": "scanlines",
-      "effectParams": {
-        "opacity": 0.1,
-        "speed": 0.5
-      }
-    },
-    "dark": {
-      "colors": {
-        "primary": "#22c55e",
-        "secondary": "#4ade80",
-        "background": "#020617",
-        "surface": "#0f172a",
-        "text": "#bbf7d0",
-        "muted": "#86efac",
-        "accent": "#22c55e"
-      },
-      "effect": "scanlines",
-      "effectParams": {
-        "opacity": 0.2,
-        "speed": 0.5
-      }
-    },
-    "customCss": ""
-  },
-  "sections": [
-    {
-      "id": "s1",
-      "type": "hero",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "Hero Section",
-      "config": {
-        "variant": "immersive",
-        "align": "center",
-        "height": "small",
-        "divider": "none",
-        "scrollAnimation": "none"
-      },
-      "content": {
-        "greeting": "Hello, I'm",
-        "name": "Matheus Lima",
-        "role": "Full Stack Developer",
-        "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
-        "ctaText": "View My Work",
-        "ctaLink": "#projects",
-        "avatarUrl": "https://github.com/mafhper.png",
-        "imageStyle": "circle",
-        "backgroundImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-oceanic.svg",
-        "backgroundPattern": "none"
-      }
-    },
-    {
-      "id": "s3",
-      "type": "skills",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "Tech Stack",
-      "config": {
-        "variant": "list",
-        "height": "small"
-      },
-      "content": {
-        "skills": [
-          "React",
-          "TypeScript",
-          "Node.js",
-          "TailwindCSS",
-          "GraphQL",
-          "PostgreSQL",
-          "Docker",
-          "AWS"
+    "username": "your-username",
+    "seo": {
+        "title": "My Portfolio",
+        "description": "Built with PushMaker",
+        "keywords": [
+            "Portfolio",
+            "Developer",
+            "Web"
         ],
-        "autoSync": true,
-        "showPercentage": true
-      }
+        "ogImage": ""
     },
-    {
-      "id": "s2",
-      "type": "github-activity",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "GitHub Activity",
-      "config": {
-        "variant": "grid",
-        "height": "small"
-      },
-      "content": {}
+    "header": {
+        "variant": "standard",
+        "logoSize": 32,
+        "navOrder": [],
+        "height": 64,
+        "blur": 12,
+        "mobileType": "fullscreen"
     },
-    {
-      "id": "s4",
-      "type": "projects",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "Selected Work",
-      "config": {
-        "variant": "grid",
-        "height": "medium"
-      },
-      "content": {
-        "items": [
-          {
-            "id": "proj1",
-            "title": "Project Alpha",
-            "description": "A robust e-commerce dashboard with real-time analytics.",
-            "link": "#",
-            "tech": [
-              "React",
-              "D3.js"
-            ],
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-boreal.svg"
-          },
-          {
-            "id": "proj2",
-            "title": "Project Beta",
-            "description": "Social media automation tool for creators.",
-            "link": "#",
-            "tech": [
-              "Node",
-              "Redis"
-            ],
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-hero.svg"
-          },
-          {
-            "id": "pi_1765603435155",
-            "title": "New Project",
-            "description": "",
-            "link": "#",
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/header-animation.svg"
-          },
-          {
-            "id": "pi_1765603437963",
-            "title": "New Project",
-            "description": "",
-            "link": "#",
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-geometrica.svg"
-          }
-        ]
-      }
+    "theme": {
+        "metadata": {
+            "id": "minimal",
+            "name": "Minimal Clean",
+            "category": "professional"
+        },
+        "typography": {
+            "heading": "Inter",
+            "body": "Inter",
+            "mono": "JetBrains Mono"
+        },
+        "borderRadius": "0px",
+        "spacing": "normal",
+        "shadows": "none",
+        "animations": "subtle",
+        "headerStyle": "standard",
+        "contentWidth": "standard",
+        "light": {
+            "colors": {
+                "primary": "#18181b",
+                "secondary": "#71717a",
+                "background": "#ffffff",
+                "surface": "#f4f4f5",
+                "text": "#18181b",
+                "muted": "#a1a1aa",
+                "accent": "#000000"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        },
+        "dark": {
+            "colors": {
+                "primary": "#fafafa",
+                "secondary": "#a1a1aa",
+                "background": "#09090b",
+                "surface": "#18181b",
+                "text": "#fafafa",
+                "muted": "#71717a",
+                "accent": "#fafafa"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        }
     },
-    {
-      "id": "s5",
-      "type": "blog-feed",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "Latest Writings",
-      "config": {
-        "variant": "list",
-        "height": "small"
-      },
-      "content": {
-        "count": 3
-      }
-    },
-    {
-      "id": "s6",
-      "type": "contact",
-      "isVisible": true,
-      "visibleInNav": true,
-      "title": "Get in Touch",
-      "config": {
-        "variant": "split",
-        "height": "small",
-        "divider": "gradient",
-        "scrollAnimation": "fade-in"
-      },
-      "content": {
-        "email": "",
-        "twitter": "x.com/mafhper",
-        "linkedin": "",
-        "github": "github.com/mafhper",
-        "backgroundPattern": "dots"
-      }
-    }
-  ],
-  "posts": [
-    {
-      "id": "p1",
-      "title": "Building a Portfolio with React",
-      "slug": "building-portfolio-react",
-      "date": "2023-11-01",
-      "excerpt": "How I built this WYSIWYG editor using React and Tailwind.",
-      "tags": [
-        "React",
-        "Dev"
-      ],
-      "visibleInNav": false,
-      "content": "---\ntitle: \"Gadgets que Mudaram Nossas Vidas\"\ndescription: \"Uma postagem de exemplo gerada automaticamente sobre Gadgets que Mudaram Nossas Vidas.\"\ntags: [Tecnologia, Dicas]\nimage: gadgets_que_mudaram_nossas_vidas-cover.svg\ndate: 2025-11-04T00:31:21.296Z\n---\n\n# Gadgets que Mudaram Nossas Vidas\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n## Subtítulo Interessante\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n![Image](https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-sakura.svg)\n\n> \"A inovação distingue um líder de um seguidor.\" - Steve Jobs\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n",
-      "coverImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-hero.svg"
-    },
-    {
-      "id": "p2",
-      "title": "The Future of Web Development",
-      "slug": "future-web-dev",
-      "date": "2023-10-15",
-      "excerpt": "Exploring server components, edge computing, and AI integration.",
-      "tags": [
-        "Opinion",
-        "Tech"
-      ],
-      "visibleInNav": false,
-      "content": "---\ntitle: \"Gadgets que Mudaram Nossas Vidas\"\ndescription: \"Uma postagem de exemplo gerada automaticamente sobre Gadgets que Mudaram Nossas Vidas.\"\ntags: [Tecnologia, Dicas]\nimage: gadgets_que_mudaram_nossas_vidas-cover.svg\ndate: 2025-11-04T00:31:21.296Z\n---\n\n# Gadgets que Mudaram Nossas Vidas\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n## Subtítulo Interessante\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n![Image](https://raw.githubusercontent.com/mafhper/spread/main/public/favicon.svg)\n\n> \"A inovação distingue um líder de um seguidor.\" - Steve Jobs\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n",
-      "coverImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-geometrica.svg"
-    }
-  ],
-  "deployTarget": "C:\\Users\\mafhp\\Documents\\GitHub\\sample",
-  "logoUrl": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/apple-touch-icon.png"
+    "sections": [
+        {
+            "id": "s1",
+            "type": "hero",
+            "isVisible": true,
+            "title": "Hero Section",
+            "config": {
+                "variant": "centered",
+                "align": "center",
+                "height": "medium"
+            },
+            "content": {
+                "greeting": "Hello, I'm",
+                "name": "Your Name",
+                "role": "Full Stack Developer",
+                "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
+                "ctaText": "View My Work",
+                "ctaLink": "#projects"
+            }
+        },
+        {
+            "id": "s2",
+            "type": "projects",
+            "isVisible": true,
+            "title": "Selected Work",
+            "config": {
+                "variant": "grid"
+            },
+            "content": {
+                "items": [
+                    {
+                        "id": "proj1",
+                        "title": "Project Alpha",
+                        "description": "A brief description of this project.",
+                        "link": "#",
+                        "tech": [
+                            "React",
+                            "Node.js"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "s3",
+            "type": "contact",
+            "isVisible": true,
+            "title": "Get in Touch",
+            "config": {
+                "variant": "centered"
+            },
+            "content": {
+                "email": "hello@example.com",
+                "github": "github.com"
+            }
+        }
+    ],
+    "posts": []
 }
