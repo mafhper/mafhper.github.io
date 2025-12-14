@@ -5,8 +5,8 @@
       "description": "Default Repo. Be Safe.",
       "url": "https://github.com/mafhper/mafhper.github.io",
       "stargazersCount": 0,
-      "language": "HTML",
-      "updatedAt": "2025-12-14T06:05:11Z"
+      "language": "JavaScript",
+      "updatedAt": "2025-12-14T06:14:47Z"
     },
     {
       "name": "aurawall",
@@ -71,14 +71,19 @@
   ],
   "languages": [
     {
-      "name": "HTML",
-      "value": 2,
-      "color": "#e34c26"
+      "name": "JavaScript",
+      "value": 1,
+      "color": "#f1e05a"
     },
     {
       "name": "TypeScript",
       "value": 2,
       "color": "#3178c6"
+    },
+    {
+      "name": "HTML",
+      "value": 1,
+      "color": "#e34c26"
     },
     {
       "name": "Astro",
