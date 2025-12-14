@@ -1,0 +1,127 @@
+{
+    "username": "your-username",
+    "seo": {
+        "title": "My Portfolio",
+        "description": "Built with PushMaker",
+        "keywords": [
+            "Portfolio",
+            "Developer",
+            "Web"
+        ],
+        "ogImage": ""
+    },
+    "header": {
+        "variant": "standard",
+        "logoSize": 32,
+        "navOrder": [],
+        "height": 64,
+        "blur": 12,
+        "mobileType": "fullscreen"
+    },
+    "theme": {
+        "metadata": {
+            "id": "minimal",
+            "name": "Minimal Clean",
+            "category": "professional"
+        },
+        "typography": {
+            "heading": "Inter",
+            "body": "Inter",
+            "mono": "JetBrains Mono"
+        },
+        "borderRadius": "0px",
+        "spacing": "normal",
+        "shadows": "none",
+        "animations": "subtle",
+        "headerStyle": "standard",
+        "contentWidth": "standard",
+        "light": {
+            "colors": {
+                "primary": "#18181b",
+                "secondary": "#71717a",
+                "background": "#ffffff",
+                "surface": "#f4f4f5",
+                "text": "#18181b",
+                "muted": "#a1a1aa",
+                "accent": "#000000"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        },
+        "dark": {
+            "colors": {
+                "primary": "#fafafa",
+                "secondary": "#a1a1aa",
+                "background": "#09090b",
+                "surface": "#18181b",
+                "text": "#fafafa",
+                "muted": "#71717a",
+                "accent": "#fafafa"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        }
+    },
+    "sections": [
+        {
+            "id": "s1",
+            "type": "hero",
+            "isVisible": true,
+            "title": "Hero Section",
+            "config": {
+                "variant": "centered",
+                "align": "center",
+                "height": "medium"
+            },
+            "content": {
+                "greeting": "Hello, I'm",
+                "name": "Your Name",
+                "role": "Full Stack Developer",
+                "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
+                "ctaText": "View My Work",
+                "ctaLink": "#projects"
+            }
+        },
+        {
+            "id": "s2",
+            "type": "projects",
+            "isVisible": true,
+            "title": "Selected Work",
+            "config": {
+                "variant": "grid"
+            },
+            "content": {
+                "items": [
+                    {
+                        "id": "proj1",
+                        "title": "Project Alpha",
+                        "description": "A brief description of this project.",
+                        "link": "#",
+                        "tech": [
+                            "React",
+                            "Node.js"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "s3",
+            "type": "contact",
+            "isVisible": true,
+            "title": "Get in Touch",
+            "config": {
+                "variant": "centered"
+            },
+            "content": {
+                "email": "hello@example.com",
+                "github": "github.com"
+            }
+        }
+    ],
+    "posts": []
+}
