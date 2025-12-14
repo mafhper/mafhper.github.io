@@ -1,0 +1,217 @@
+{
+  "username": "mafhper",
+  "seo": {
+    "title": "My Portfolio",
+    "description": "Built with PushMaker",
+    "keywords": [
+      "Portfolio",
+      "Developer",
+      "Web"
+    ],
+    "ogImage": "https://raw.githubusercontent.com/mafhper/mafhper.github.io/main/public/assets/images/1765693163518-sok0yj.png",
+    "useLogoAsFavicon": true,
+    "basePath": "/mafhper.github.io"
+  },
+  "header": {
+    "variant": "minimal",
+    "logoSize": 46,
+    "navOrder": [],
+    "height": 96,
+    "blur": 30,
+    "mobileType": "minimal",
+    "heroBehavior": "fixed"
+  },
+  "theme": {
+    "metadata": {
+      "id": "fintech-gold",
+      "name": "Premium Gold",
+      "category": "fintech",
+      "author": "PushMaker",
+      "description": "Luxury gold accents for wealth.",
+      "tags": [
+        "luxury",
+        "gold",
+        "premium"
+      ],
+      "version": "1.0.0",
+      "createdAt": "2024-01-01"
+    },
+    "typography": {
+      "heading": "Cormorant Garamond",
+      "body": "Raleway",
+      "mono": "Source Code Pro"
+    },
+    "borderRadius": "0px",
+    "spacing": "relaxed",
+    "shadows": "medium",
+    "animations": "subtle",
+    "headerStyle": "minimal",
+    "contentWidth": "narrow",
+    "light": {
+      "colors": {
+        "primary": "#b45309",
+        "secondary": "#d97706",
+        "background": "#fffbeb",
+        "surface": "#fef3c7",
+        "text": "#451a03",
+        "muted": "#a16207",
+        "accent": "#ca8a04"
+      },
+      "effect": "noise",
+      "effectParams": {
+        "opacity": 0.03
+      }
+    },
+    "dark": {
+      "colors": {
+        "primary": "#fbbf24",
+        "secondary": "#f59e0b",
+        "background": "#0c0a09",
+        "surface": "#1c1917",
+        "text": "#fef3c7",
+        "muted": "#fcd34d",
+        "accent": "#fbbf24"
+      },
+      "effect": "noise",
+      "effectParams": {
+        "opacity": 0.05
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "s1",
+      "type": "hero",
+      "isVisible": true,
+      "title": "Hero Section",
+      "config": {
+        "variant": "immersive",
+        "align": "center",
+        "height": "medium",
+        "vignetteEnabled": false,
+        "gradientDirection": "top",
+        "vignetteShape": "ellipse",
+        "showGradientOverlay": true
+      },
+      "content": {
+        "greeting": "Hello, I'm",
+        "name": "Matheus Lima",
+        "role": "Full Stack Developer",
+        "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
+        "ctaText": "View My Work",
+        "ctaLink": "#projects",
+        "backgroundImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-lava.svg",
+        "blendMode": "overlay",
+        "avatarUrl": "https://github.com/mafhper.png"
+      }
+    },
+    {
+      "id": "s_1765693384634",
+      "type": "skills",
+      "isVisible": false,
+      "title": "New skills",
+      "config": {
+        "variant": "centered",
+        "height": "small",
+        "scrollAnimation": "none",
+        "divider": "line"
+      },
+      "content": {
+        "items": [],
+        "text": "Placeholder text...",
+        "autoSync": true,
+        "displayStyle": "badges",
+        "backgroundPattern": "none"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "projects",
+      "isVisible": true,
+      "title": "Selected Work",
+      "config": {
+        "variant": "grid",
+        "divider": "line"
+      },
+      "content": {
+        "items": [
+          {
+            "id": "proj1",
+            "title": "Project Alpha",
+            "description": "A brief description of this project.",
+            "link": "#",
+            "tech": [
+              "React",
+              "Node.js"
+            ],
+            "image": "https://raw.githubusercontent.com/mafhper/mafhper.github.io/main/assets/images/bg.jpg"
+          },
+          {
+            "id": "pi_1765693299395",
+            "title": "Project Beta",
+            "description": "",
+            "link": "#",
+            "image": "https://raw.githubusercontent.com/mafhper/mafhper.github.io/main/public/assets/images/1765693332450-z64o0n.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s_1765693788465",
+      "type": "blog-feed",
+      "isVisible": true,
+      "title": "New blog-feed",
+      "config": {
+        "variant": "grid"
+      },
+      "content": {
+        "items": [],
+        "text": "Placeholder text..."
+      },
+      "visibleInNav": false
+    },
+    {
+      "id": "s_1765693368793",
+      "type": "github-activity",
+      "isVisible": true,
+      "title": "Github Activity",
+      "config": {
+        "variant": "grid",
+        "divider": "none"
+      },
+      "content": {
+        "items": [],
+        "text": "Placeholder text..."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "contact",
+      "isVisible": true,
+      "title": "Get in Touch",
+      "config": {
+        "variant": "centered"
+      },
+      "content": {
+        "email": "hello@example.com",
+        "github": "github.com/mafhper",
+        "twitter": "x.com/mafhper"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "id": "p_1765693640010",
+      "title": "New Page",
+      "slug": "page-1765693640010",
+      "date": "2025-12-14",
+      "excerpt": "",
+      "content": "# Carreira em TI: Dicas para Iniciantes\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n## Subtítulo Interessante\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.\n\n> \"A inovação distingue um líder de um seguidor.\" - Steve Jobs\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nCurabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.![Image](https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-ember.svg)",
+      "tags": [],
+      "visibleInNav": false,
+      "coverImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-lava.svg"
+    }
+  ],
+  "logoUrl": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/apple-touch-icon.png",
+  "deployTarget": "C:\\Users\\mafhp\\Documents\\GitHub\\mafhper.github.io"
+}
