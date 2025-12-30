@@ -1,157 +1,127 @@
 {
-  "username": "mafhper",
-  "seo": {
-    "title": "My Portfolio",
-    "description": "Built with PushMaker",
-    "keywords": [
-      "Portfolio",
-      "Developer",
-      "Web"
-    ],
-    "ogImage": "https://github.com/mafhper.png",
-    "useLogoAsFavicon": true,
-    "basePath": "/mafhper"
-  },
-  "header": {
-    "variant": "transparent",
-    "logoSize": 32,
-    "navOrder": [],
-    "height": 64,
-    "blur": 12,
-    "mobileType": "fullscreen"
-  },
-  "theme": {
-    "metadata": {
-      "id": "dev-terminal",
-      "name": "Terminal",
-      "category": "devrepo",
-      "author": "PushMaker",
-      "description": "Command line inspired interface.",
-      "tags": [
-        "code",
-        "hacker",
-        "green"
-      ],
-      "version": "1.0.0",
-      "createdAt": "2024-01-01"
-    },
-    "typography": {
-      "heading": "JetBrains Mono",
-      "body": "JetBrains Mono",
-      "mono": "JetBrains Mono"
-    },
-    "borderRadius": "4px",
-    "spacing": "compact",
-    "shadows": "none",
-    "animations": "none",
-    "headerStyle": "minimal",
-    "contentWidth": "full",
-    "light": {
-      "colors": {
-        "primary": "#16a34a",
-        "secondary": "#22c55e",
-        "background": "#f0fdf4",
-        "surface": "#dcfce7",
-        "text": "#14532d",
-        "muted": "#4ade80",
-        "accent": "#16a34a"
-      },
-      "effect": "scanlines",
-      "effectParams": {
-        "opacity": 0.1,
-        "speed": 0.5
-      }
-    },
-    "dark": {
-      "colors": {
-        "primary": "#22c55e",
-        "secondary": "#4ade80",
-        "background": "#020617",
-        "surface": "#0f172a",
-        "text": "#bbf7d0",
-        "muted": "#86efac",
-        "accent": "#22c55e"
-      },
-      "effect": "scanlines",
-      "effectParams": {
-        "opacity": 0.2,
-        "speed": 0.5
-      }
-    }
-  },
-  "sections": [
-    {
-      "id": "s1",
-      "type": "hero",
-      "isVisible": true,
-      "title": "Hero Section",
-      "config": {
-        "variant": "immersive",
-        "align": "center",
-        "height": "medium",
-        "vignetteEnabled": false,
-        "gradientDirection": "top"
-      },
-      "content": {
-        "greeting": "Hello, I'm",
-        "name": "Matheus Pereira",
-        "role": "Full Stack Developer",
-        "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
-        "ctaText": "View My Work",
-        "ctaLink": "#projects",
-        "backgroundImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-lava.svg",
-        "avatarUrl": "https://github.com/mafhper.png"
-      }
-    },
-    {
-      "id": "s_1767132367852",
-      "type": "github-activity",
-      "isVisible": true,
-      "title": "Github Activity",
-      "config": {
-        "variant": "grid"
-      },
-      "content": {
-        "items": [],
-        "text": "Placeholder text..."
-      }
-    },
-    {
-      "id": "s_1767132432900",
-      "type": "projects",
-      "isVisible": true,
-      "title": "New projects",
-      "config": {
-        "variant": "grid"
-      },
-      "content": {
-        "items": [
-          {
-            "id": "pi_1767132440460",
-            "title": "AuraWall",
-            "description": "",
-            "link": "#",
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-oceanic.svg"
-          }
+    "username": "your-username",
+    "seo": {
+        "title": "My Portfolio",
+        "description": "Built with PushMaker",
+        "keywords": [
+            "Portfolio",
+            "Developer",
+            "Web"
         ],
-        "text": "Placeholder text..."
-      }
+        "ogImage": ""
     },
-    {
-      "id": "s3",
-      "type": "contact",
-      "isVisible": true,
-      "title": "Get in Touch",
-      "config": {
-        "variant": "centered"
-      },
-      "content": {
-        "email": "",
-        "github": "github.com/mafhper/",
-        "twitter": "x.com/mafhper/"
-      }
-    }
-  ],
-  "posts": [],
-  "logoUrl": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/apple-touch-icon.png"
+    "header": {
+        "variant": "standard",
+        "logoSize": 32,
+        "navOrder": [],
+        "height": 64,
+        "blur": 12,
+        "mobileType": "fullscreen"
+    },
+    "theme": {
+        "metadata": {
+            "id": "minimal",
+            "name": "Minimal Clean",
+            "category": "professional"
+        },
+        "typography": {
+            "heading": "Inter",
+            "body": "Inter",
+            "mono": "JetBrains Mono"
+        },
+        "borderRadius": "0px",
+        "spacing": "normal",
+        "shadows": "none",
+        "animations": "subtle",
+        "headerStyle": "standard",
+        "contentWidth": "standard",
+        "light": {
+            "colors": {
+                "primary": "#18181b",
+                "secondary": "#71717a",
+                "background": "#ffffff",
+                "surface": "#f4f4f5",
+                "text": "#18181b",
+                "muted": "#a1a1aa",
+                "accent": "#000000"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        },
+        "dark": {
+            "colors": {
+                "primary": "#fafafa",
+                "secondary": "#a1a1aa",
+                "background": "#09090b",
+                "surface": "#18181b",
+                "text": "#fafafa",
+                "muted": "#71717a",
+                "accent": "#fafafa"
+            },
+            "effect": "none",
+            "effectParams": {
+                "opacity": 0.1
+            }
+        }
+    },
+    "sections": [
+        {
+            "id": "s1",
+            "type": "hero",
+            "isVisible": true,
+            "title": "Hero Section",
+            "config": {
+                "variant": "centered",
+                "align": "center",
+                "height": "medium"
+            },
+            "content": {
+                "greeting": "Hello, I'm",
+                "name": "Your Name",
+                "role": "Full Stack Developer",
+                "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
+                "ctaText": "View My Work",
+                "ctaLink": "#projects"
+            }
+        },
+        {
+            "id": "s2",
+            "type": "projects",
+            "isVisible": true,
+            "title": "Selected Work",
+            "config": {
+                "variant": "grid"
+            },
+            "content": {
+                "items": [
+                    {
+                        "id": "proj1",
+                        "title": "Project Alpha",
+                        "description": "A brief description of this project.",
+                        "link": "#",
+                        "tech": [
+                            "React",
+                            "Node.js"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "s3",
+            "type": "contact",
+            "isVisible": true,
+            "title": "Get in Touch",
+            "config": {
+                "variant": "centered"
+            },
+            "content": {
+                "email": "hello@example.com",
+                "github": "github.com"
+            }
+        }
+    ],
+    "posts": []
 }
