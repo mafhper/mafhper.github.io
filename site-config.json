@@ -13,12 +13,13 @@
     "basePath": "/mafhper"
   },
   "header": {
-    "variant": "transparent",
-    "logoSize": 32,
+    "variant": "subtle",
+    "logoSize": 31,
     "navOrder": [],
     "height": 64,
     "blur": 12,
-    "mobileType": "fullscreen"
+    "mobileType": "fullscreen",
+    "heroBehavior": "overlay"
   },
   "theme": {
     "metadata": {
@@ -42,8 +43,8 @@
     },
     "borderRadius": "4px",
     "spacing": "compact",
-    "shadows": "none",
-    "animations": "none",
+    "shadows": "subtle",
+    "animations": "subtle",
     "headerStyle": "minimal",
     "contentWidth": "full",
     "light": {
@@ -86,9 +87,9 @@
       "isVisible": true,
       "title": "Hero Section",
       "config": {
-        "variant": "immersive",
+        "variant": "typographic",
         "align": "center",
-        "height": "medium",
+        "height": "full",
         "vignetteEnabled": false,
         "gradientDirection": "top"
       },
@@ -98,60 +99,13 @@
         "role": "Full Stack Developer",
         "bio": "I build accessible, pixel-perfect, performant, and delightful web experiences.",
         "ctaText": "View My Work",
-        "ctaLink": "#projects",
+        "ctaLink": "https://mafhper.github.io/aurawall/",
         "backgroundImage": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-lava.svg",
         "avatarUrl": "https://github.com/mafhper.png"
-      }
-    },
-    {
-      "id": "s_1767132367852",
-      "type": "github-activity",
-      "isVisible": true,
-      "title": "Github Activity",
-      "config": {
-        "variant": "grid"
       },
-      "content": {
-        "items": [],
-        "text": "Placeholder text..."
-      }
-    },
-    {
-      "id": "s_1767132432900",
-      "type": "projects",
-      "isVisible": true,
-      "title": "New projects",
-      "config": {
-        "variant": "grid"
-      },
-      "content": {
-        "items": [
-          {
-            "id": "pi_1767132440460",
-            "title": "AuraWall",
-            "description": "",
-            "link": "#",
-            "image": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/bg-oceanic.svg"
-          }
-        ],
-        "text": "Placeholder text..."
-      }
-    },
-    {
-      "id": "s3",
-      "type": "contact",
-      "isVisible": true,
-      "title": "Get in Touch",
-      "config": {
-        "variant": "centered"
-      },
-      "content": {
-        "email": "",
-        "github": "github.com/mafhper/",
-        "twitter": "x.com/mafhper/"
-      }
+      "visibleInNav": true
     }
   ],
   "posts": [],
-  "logoUrl": "https://raw.githubusercontent.com/mafhper/aurawall/main/public/apple-touch-icon.png"
+  "logoUrl": "https://raw.githubusercontent.com/mafhper/mafhper.github.io/main/public/assets/images/1767187422103-5zugsp.svg"
 }
