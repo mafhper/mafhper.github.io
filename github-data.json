@@ -1,6 +1,14 @@
 {
   "repos": [
     {
+      "name": "mafhper.github.io",
+      "description": "Default Repo. Be Safe.",
+      "url": "https://github.com/mafhper/mafhper.github.io",
+      "stargazersCount": 0,
+      "language": "HTML",
+      "updatedAt": "2025-12-31T13:08:41Z"
+    },
+    {
       "name": "mafhper",
       "description": null,
       "url": "https://github.com/mafhper/mafhper",
@@ -39,17 +47,15 @@
       "stargazersCount": 0,
       "language": "TypeScript",
       "updatedAt": "2025-12-17T21:17:54Z"
-    },
-    {
-      "name": "spread",
-      "description": "A better way to share",
-      "url": "https://github.com/mafhper/spread",
-      "stargazersCount": 0,
-      "language": "Astro",
-      "updatedAt": "2025-12-07T09:48:03Z"
     }
   ],
   "activities": [
+    {
+      "type": "Push",
+      "repoName": "mafhper.github.io",
+      "date": "31/12/2025",
+      "message": "Updated mafhper.github.io"
+    },
     {
       "type": "Push",
       "repoName": "mafhper",
@@ -61,29 +67,18 @@
       "repoName": "my-tunne",
       "date": "28/12/2025",
       "message": "Updated my-tunne"
-    },
-    {
-      "type": "Push",
-      "repoName": "aurawall",
-      "date": "27/12/2025",
-      "message": "Updated aurawall"
     }
   ],
   "languages": [
     {
       "name": "HTML",
-      "value": 2,
+      "value": 3,
       "color": "#e34c26"
     },
     {
       "name": "TypeScript",
       "value": 2,
       "color": "#3178c6"
-    },
-    {
-      "name": "Astro",
-      "value": 1,
-      "color": "#ff5a03"
     }
   ]
 }
