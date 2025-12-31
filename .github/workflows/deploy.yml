@@ -1,5 +1,5 @@
 # PushMaker - GitHub Pages Deploy Workflow
-# This workflow builds and deploys the portfolio site from site-config.json
+# This workflow builds and deploys the portfolio site
 
 name: Deploy PushMaker Site
 
@@ -8,9 +8,9 @@ on:
     branches:
       - main
     paths:
-      - 'site-config.json'
       - 'index.html'
-      - '.github/workflows/deploy.yml'
+      - 'assets/**'
+      - 'site-config.json'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -62,12 +62,6 @@ jobs:
           if [ -d "public" ]; then
             echo "📂 Copying public assets..."
             cp -r public/* dist/ 2>/dev/null || :
-          fi
-
-          # 5. Copy JS/CSS Assets (built by PushMaker)
-          if [ -d "assets" ]; then
-            echo "📦 Copying JavaScript/CSS assets..."
-            cp -r assets dist/
           fi
           
           echo "✅ Build preparation complete."
