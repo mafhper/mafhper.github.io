@@ -1,0 +1,37 @@
+{
+  "brand": "@mafhper",
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Full Stack Developer",
+    "tagline": "I build accessible, pixel-perfect, and performant web experiences.",
+    "viewWork": "View My Work",
+    "viewProject": "View Project"
+  },
+  "about": {
+    "title": "About",
+    "description": "Software Engineer focused on Frontend with experience spanning Web, Data, and IoT. I build efficient solutions with clean code and solid architecture."
+  },
+  "nav": {
+    "projects": "Projects",
+    "techStack": "Tech Stack",
+    "activity": "Activity"
+  },
+  "projects": {
+    "title": "Open Source Projects",
+    "viewAll": "View all on GitHub",
+    "comingSoon": "Coming Soon...",
+    "comingSoonDesc": "Open Source CMS, Advanced Markdown Editor, Designer Toolkit Suite, and more projects underway."
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "pushedTo": "pushed to",
+    "timeAgo": "{{time}} ago"
+  },
+  "techStack": {
+    "title": "Technologies"
+  },
+  "footer": {
+    "philosophy": "I believe in a free and accessible web for all.",
+    "copyright": "(c) {{year}} Matheus Pereira. All rights reserved."
+  }
+}

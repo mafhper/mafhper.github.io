@@ -1,0 +1,29 @@
+{
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full Stack",
+    "tagline": "Creo experiencias web accesibles, pixel-perfect y de alto rendimiento.",
+    "viewWork": "Ver Mis Proyectos",
+    "viewProject": "Ver Proyecto"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Ingeniero de Software enfocado en Frontend con experiencia en Web, Datos e IoT. Construyo soluciones eficientes con código limpio y arquitectura sólida."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewAll": "Ver todos en GitHub"
+  },
+  "activity": {
+    "title": "Actividad Reciente",
+    "pushedTo": "envió a",
+    "timeAgo": "hace {{time}}"
+  },
+  "techStack": {
+    "title": "Tecnologías"
+  },
+  "footer": {
+    "philosophy": "Creo en una web libre y accesible para todos.",
+    "copyright": "© {{year}} Matheus Pereira. Todos los derechos reservados."
+  }
+}

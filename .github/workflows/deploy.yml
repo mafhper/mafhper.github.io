@@ -1,16 +1,12 @@
-# PushMaker - GitHub Pages Deploy Workflow
+# Portfolio - GitHub Pages Deploy Workflow
 # This workflow builds and deploys the portfolio site
 
-name: Deploy PushMaker Site
+name: Deploy Portfolio
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'index.html'
-      - 'assets/**'
-      - 'site-config.json'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -33,38 +29,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Generate Site
-        run: |
-          # Create dist folder
-          mkdir -p dist
+      - name: Install Dependencies
+        run: npm ci
 
-          # 1. Copy Main Entry
-          if [ -f "index.html" ]; then
-            echo "📄 Copying index.html..."
-            cp index.html dist/index.html
-          else
-            echo "⚠️ No index.html found!"
-          fi
-
-          # 2. Copy Data Snapshot
-          if [ -f "github-data.json" ]; then
-            echo "📊 Copying github-data.json..."
-            cp github-data.json dist/github-data.json
-          fi
-
-          # 3. Copy Config
-          if [ -f "site-config.json" ]; then
-            cp site-config.json dist/site-config.json
-          fi
-
-          # 4. Copy Public Assets
-          if [ -d "public" ]; then
-            echo "📂 Copying public assets..."
-            cp -r public/* dist/ 2>/dev/null || :
-          fi
-          
-          echo "✅ Build preparation complete."
+      - name: Build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

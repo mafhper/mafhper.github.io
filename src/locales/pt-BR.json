@@ -1,0 +1,44 @@
+{
+  "brand": "@mafhper",
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "role": "Desenvolvedor Full Stack",
+    "tagline": "Crio experiências web acessíveis, pixel-perfect e performáticas.",
+    "viewWork": "Ver Meus Projetos",
+    "viewProject": "Ver Projeto"
+  },
+  "about": {
+    "title": "Sobre",
+    "description": "Engenheiro de Software com foco em Frontend e experiência abrangendo Web, Dados e IoT. Construo soluções eficientes com código limpo e arquitetura sólida."
+  },
+  "nav": {
+    "projects": "Projetos",
+    "techStack": "Tech Stack",
+    "activity": "Atividade"
+  },
+  "projects": {
+    "title": "Projetos Open Source",
+    "viewAll": "Ver todos no GitHub",
+    "comingSoon": "Em breve...",
+    "comingSoonDesc": "CMS Open Source, Editor de Markdown avançado, Suite de ferramentas para designers, e mais projetos em andamento.",
+    "aurawall": "Gerador de wallpapers abstratos com suporte a gestos e cores dinâmicas.",
+    "personalnews": "Agregador de notícias focado em privacidade, design limpo e IA local.",
+    "spread": "Ferramenta para criar e compartilhar cartões de conteúdo visualmente ricos.",
+    "imaginizim": "Otimizador de imagens client-side com foco em performance e privacidade.",
+    "fremit": "Editor de mockups de código com suporte a temas e exportação em alta resolução."
+  },
+  "activity": {
+    "title": "Coding Pulse",
+    "subtitle": "Atividade recente no GitHub em tempo real",
+    "pushedTo": "enviou para",
+    "timeAgo": "{{time}} atrás"
+  },
+  "techStack": {
+    "title": "Arsenal Tecnológico",
+    "description": "Ferramentas que utilizo para transformar ideias em realidade."
+  },
+  "footer": {
+    "philosophy": "Acredito em uma web livre e acessível para todos.",
+    "copyright": "© {{year}} Matheus Pereira. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,92 @@
+:root {
+  /* Brand Palette - Blue-Teal tones inspired by profile */
+  --color-evergreen: #0d1520;
+  /* Deep Slate - Dark blue-ish base */
+  --color-emerald: #2a5f7a;
+  /* Primary Brand - Teal/Blue */
+  --color-sage: #7eb8c9;
+  /* Secondary/Text - Light Cyan */
+  --color-lime-cream: #a8e6cf;
+  /* Brand Accent - Logo Neon Green */
+  --color-brand: #00f808;
+  /* Accent/Highlight - Mint for contrast */
+
+  /* Neutrals & Utility */
+  --color-white: #ffffff;
+  --color-black: #050508;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* Default Theme (matches System if not overridden) */
+  --bg-primary: var(--color-evergreen);
+  --bg-secondary: #111d2b;
+  --bg-card: #152232;
+
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-sage);
+  --text-muted: rgba(126, 184, 201, 0.6);
+
+  --accent-primary: var(--color-lime-cream);
+  --accent-secondary: var(--color-sage);
+  --accent-highlight: #ffffff;
+
+  --border-subtle: rgba(42, 95, 122, 0.3);
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme Override */
+[data-theme='light'] {
+  --bg-primary: var(--color-gray-50);
+  --bg-secondary: var(--color-white);
+  --bg-card: var(--color-white);
+
+  --text-primary: var(--color-evergreen);
+  --text-secondary: var(--color-emerald);
+  --text-muted: var(--color-sage);
+
+  --accent-primary: var(--color-emerald);
+  --accent-secondary: var(--color-sage);
+  --accent-highlight: var(--color-evergreen);
+
+  --border-subtle: var(--color-gray-200);
+  --shadow-subtle: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Theme Override (explicit) */
+[data-theme='dark'] {
+  --bg-primary: var(--color-evergreen);
+  --bg-secondary: color-mix(in srgb, var(--color-evergreen), var(--color-black) 20%);
+  --bg-card: color-mix(in srgb, var(--color-evergreen), var(--color-white) 5%);
+
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-sage);
+  --text-muted: color-mix(in srgb, var(--text-secondary), transparent 40%);
+
+  --accent-primary: var(--color-brand);
+  --accent-secondary: var(--color-sage);
+  --accent-highlight: var(--color-lime-cream);
+
+  --border-subtle: color-mix(in srgb, var(--color-emerald), transparent 80%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg-primary: var(--color-gray-50);
+    --bg-secondary: var(--color-white);
+    --bg-card: var(--color-white);
+
+    --text-primary: var(--color-evergreen);
+    --text-secondary: var(--color-emerald);
+    --text-muted: var(--color-sage);
+
+    --accent-primary: var(--color-emerald);
+    --accent-secondary: var(--color-sage);
+    --accent-highlight: var(--color-evergreen);
+
+    --border-subtle: var(--color-gray-200);
+    --shadow-subtle: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+}
