@@ -35,6 +35,7 @@
 
   --border-subtle: rgba(42, 95, 122, 0.3);
   --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 /* Light Theme Override */
@@ -53,6 +54,7 @@
 
   --border-subtle: var(--color-gray-200);
   --shadow-subtle: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  color-scheme: light;
 }
 
 /* Dark Theme Override (explicit) */
@@ -70,6 +72,7 @@
   --accent-highlight: var(--color-lime-cream);
 
   --border-subtle: color-mix(in srgb, var(--color-emerald), transparent 80%);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: light) {

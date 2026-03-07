@@ -1,31 +1,123 @@
 {
+  "brand": "@mafhper",
   "hero": {
+    "kicker": "Proyectos personales",
     "greeting": "Hola, soy",
     "role": "Desarrollador Full Stack",
-    "tagline": "Creo experiencias web accesibles, pixel-perfect y de alto rendimiento.",
-    "viewWork": "Ver Mis Proyectos",
-    "viewProject": "Ver Proyecto"
+    "tagline": "Hago sitios, herramientas y experimentos por curiosidad y por gusto por el proceso.",
+    "description": "Este espacio reúne proyectos open source y estudios visuales que fui desarrollando en mi tiempo libre, casi siempre mezclando web, interfaz y exploración técnica.",
+    "primaryCta": "Ver proyectos",
+    "secondaryCta": "GitHub",
+    "featuredNow": "Rotando ahora",
+    "stackLabel": "Stack del proyecto",
+    "stats": {
+      "projects": "proyectos destacados",
+      "locales": "idiomas",
+      "focusValue": "Web • Data • IoT",
+      "focusLabel": "frentes activas"
+    }
   },
   "about": {
     "title": "Sobre Mí",
     "description": "Ingeniero de Software enfocado en Frontend con experiencia en Web, Datos e IoT. Construyo soluciones eficientes con código limpio y arquitectura sólida."
   },
+  "nav": {
+    "projects": "Proyectos",
+    "techStack": "Tech Stack",
+    "activity": "Actividad"
+  },
   "projects": {
-    "title": "Proyectos Destacados",
+    "title": "Proyectos Open Source",
+    "intro": "Una selección de proyectos open source que fui construyendo y puliendo por curiosidad, utilidad y gusto por las interfaces.",
     "viewAll": "Ver todos en GitHub",
+    "featuredLabel": "Proyecto destacado",
+    "viewSource": "Ver código",
+    "liveDemo": "Demo en vivo",
+    "aurawall": "Generador de wallpapers abstractos con soporte para gestos y colores dinámicos.",
+    "personalnews": "Agregador de noticias enfocado en privacidad, diseño limpio e IA local.",
+    "spread": "Herramienta para crear y compartir tarjetas de contenido visualmente ricas.",
+    "imaginizim": "Optimizador de imágenes client-side con foco en rendimiento y privacidad.",
+    "fremit": "Editor de mockups de código con soporte para temas y exportación en alta resolución.",
     "markLee": "Editor Markdown de escritorio enfocado en concentración, vista previa en tiempo real y exportación PDF cuidada.",
     "kaesKeideInspector": "Extensión para inspeccionar CSS, HTML, accesibilidad, assets y la stack tecnológica completa de cualquier sitio."
   },
   "activity": {
-    "title": "Actividad Reciente",
-    "pushedTo": "envió a",
-    "timeAgo": "hace {{time}}"
+    "title": "Coding Pulse",
+    "subtitle": "Eventos públicos recientes de GitHub y algunos repositorios en los que sigo tocando cosas por hobby.",
+    "statusTitle": "En foco ahora",
+    "statusIntro": "Estos repositorios están empujando el diseño actual, la base técnica y los próximos experimentos.",
+    "liveLabel": "live github feed",
+    "loading": "Cargando actividad pública…",
+    "error": "No fue posible cargar la actividad ahora.",
+    "empty": "No hay eventos recientes por el momento.",
+    "now": "ahora",
+    "focusTitle": "Repos en foco",
+    "runtimeTitle": "Runtime",
+    "runtimeIntro": "Herramientas e infraestructura que sostienen este sitio hoy.",
+    "runtime": {
+      "infra": "Infra",
+      "ui": "UI",
+      "packageManager": "Paquetes"
+    },
+    "actions": {
+      "push": "envió a",
+      "watch": "marcó con estrella",
+      "create": "creó",
+      "fork": "forkeó",
+      "pullRequestOpened": "abrió PR en",
+      "pullRequestMerged": "fusionó PR en",
+      "issueOpened": "abrió issue en",
+      "issueClosed": "cerró issue en",
+      "updated": "actualizó"
+    }
   },
   "techStack": {
-    "title": "Tecnologías"
+    "eyebrow": "Modo de trabajo",
+    "title": "Arsenal Tecnológico",
+    "description": "Algunas áreas y herramientas que suelo explorar cuando estoy construyendo cosas por interés personal.",
+    "introTitle": "Cómo opero",
+    "introText": "Prefiero interfaces legibles, sistemas fáciles de evolucionar y tooling que no se interpone entre la idea y el deploy. La stack sirve al producto, no al revés.",
+    "principles": {
+      "performance": {
+        "title": "Rendimiento con intención",
+        "description": "La optimización entra temprano para sostener fluidez, no como parche tardío."
+      },
+      "clarity": {
+        "title": "Claridad de interfaz",
+        "description": "Jerarquía, contraste y lenguaje deben reducir fricción real."
+      },
+      "delivery": {
+        "title": "Entrega que escala",
+        "description": "Estructuro código y tooling para que el proyecto siga flexible después de v1."
+      }
+    },
+    "areas": {
+      "frontend": {
+        "label": "Interfaz",
+        "title": "Frontend",
+        "summary": "Experiencias web con ritmo visual, responsividad e ingeniería predecible."
+      },
+      "backend": {
+        "label": "Servicios",
+        "title": "Backend",
+        "summary": "APIs y capas de datos con modelado simple, observabilidad y baja fricción operativa."
+      },
+      "systems": {
+        "label": "Bajo nivel",
+        "title": "Systems",
+        "summary": "Rust, embebidos y experimentos cercanos al hardware cuando el problema exige proximidad al sistema."
+      },
+      "tools": {
+        "label": "Entrega",
+        "title": "Tools",
+        "summary": "Tooling de build, automatización y ambiente para reducir la distancia entre idea, iteración y deploy."
+      }
+    }
   },
   "footer": {
+    "tagline": "Un lugar para reunir interfaces, herramientas y experimentos que fui haciendo con el tiempo.",
     "philosophy": "Creo en una web libre y accesible para todos.",
-    "copyright": "© {{year}} Matheus Pereira. Todos los derechos reservados."
+    "copyright": "© {{year}} @mafhper.",
+    "rights": "Todos los derechos reservados."
   }
 }

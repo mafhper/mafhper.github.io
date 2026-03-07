@@ -16,20 +16,18 @@ export const Footer: React.FC = () => {
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-[var(--accent-primary)] to-transparent opacity-50"></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-7xl mx-auto grid gap-8 items-center md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
         {/* Brand & Tagline */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left md:justify-self-start">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
             <img src="/logo.svg" alt="mafhper logo" className="w-8 h-8" />
             <span className="font-bold text-lg tracking-tight">@mafhper</span>
           </div>
-          <p className="text-[var(--text-muted)] text-sm max-w-xs">
-            {t('footer.tagline', 'Building the future, one pixel at a time.')}
-          </p>
+          <p className="text-[var(--text-muted)] text-sm max-w-xs">{t('footer.tagline')}</p>
         </div>
 
         {/* Social Links */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center justify-center gap-6 md:justify-self-center">
           {socialLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -38,7 +36,7 @@ export const Footer: React.FC = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--text-muted)] hover:text-[var(--accent-primary)] hover:-translate-y-1 transition-all duration-300"
+                className="text-[var(--text-muted)] hover:text-[var(--accent-primary)] hover:-translate-y-1 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-secondary)] rounded-full"
                 aria-label={link.label}
               >
                 <Icon size={24} />
@@ -48,9 +46,9 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center md:text-right text-xs text-[var(--text-muted)]">
-          <p>&copy; {currentYear} @mafhper.</p>
-          <p>{t('footer.rights', 'All rights reserved.')}</p>
+        <div className="text-center md:text-right text-xs text-[var(--text-muted)] md:justify-self-end">
+          <p>{t('footer.copyright', { year: currentYear })}</p>
+          <p>{t('footer.rights')}</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Project } from '../data/projects';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
@@ -7,6 +8,8 @@ interface ProjectCardProps {
 }
 
 export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className="block relative aspect-[16/10] rounded-2xl shadow-2xl group bg-[var(--bg-card)] border border-white/10 overflow-hidden"
@@ -72,7 +75,7 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
               <img src={currentProject.logoUrl} alt="" className="w-5 h-5 object-contain" />
             )}
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 block">
-              Featured Project
+              {t('projects.featuredLabel')}
             </span>
           </div>
           <h2 className="text-3xl font-bold text-white tracking-tight">{currentProject.name}</h2>
@@ -84,7 +87,7 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-[var(--accent-primary)] transition-colors"
           >
-            View source{' '}
+            {t('projects.viewSource')}{' '}
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </a>
 
@@ -98,7 +101,7 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
                 className="flex items-center gap-1 hover:text-[var(--accent-primary)] transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
-                Live Demo{' '}
+                {t('projects.liveDemo')}{' '}
                 <ArrowUpRight
                   size={14}
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { m, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Github } from 'lucide-react';
 import { projects as featuredProjects } from '../data/projects';
 import { useFirstPaintGate } from '../hooks/useFirstPaintGate';
 import { ProjectCardStatic } from './ProjectCardStatic';
@@ -12,26 +12,24 @@ export const Hero: React.FC = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const motionReady = useFirstPaintGate();
 
-  // Detect if user prefers reduced motion or is on mobile
   const reduceMotion =
     typeof window !== 'undefined' &&
     (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 768);
 
   useEffect(() => {
-    // Only start rotating projects after first paint to save resources
     if (!motionReady) return;
 
     const timer = setInterval(() => {
       setCurrentProjectIndex((prev) => (prev + 1) % featuredProjects.length);
     }, 8000);
+
     return () => clearInterval(timer);
   }, [motionReady]);
 
   const currentProject = featuredProjects[currentProjectIndex];
 
   return (
-    <section className="relative w-full flex-grow flex flex-col items-center justify-center px-6 py-24 min-h-[90vh]">
-      {/* Immersive Background Transition - Conditional Rendering */}
+    <section className="relative w-full px-6 pt-12 pb-24 min-h-[calc(100vh-4rem)] flex items-center">
       {motionReady && !reduceMotion ? (
         <AnimatePresence mode="popLayout">
           <m.div
@@ -42,24 +40,21 @@ export const Hero: React.FC = () => {
             transition={{ duration: 1.2 }}
             className="absolute inset-0 pointer-events-none overflow-hidden"
           >
-            {/* Primary radial gradient */}
             <div
               className="absolute inset-0"
               style={{
                 background: `radial-gradient(ellipse 80% 70% at 70% 40%, ${currentProject.color}50 0%, transparent 70%)`
               }}
             />
-            {/* Secondary subtle glow */}
             <div
               className="absolute inset-0"
               style={{
-                background: `radial-gradient(circle at 30% 80%, ${currentProject.color}20 0%, transparent 50%)`
+                background: `radial-gradient(circle at 22% 24%, ${currentProject.color}20 0%, transparent 36%)`
               }}
             />
           </m.div>
         </AnimatePresence>
       ) : (
-        /* Static Background for First Paint / Mobile */
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
             className="absolute inset-0"
@@ -70,64 +65,109 @@ export const Hero: React.FC = () => {
         </div>
       )}
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 lg:gap-32 w-full">
-        {/* Text Content */}
-        <div className="flex-1 text-center md:text-left z-20">
-          <m.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-          >
-            {/* Greeting */}
-            <p className="text-xl md:text-2xl text-[var(--text-secondary)] mb-6 font-light">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)] items-center">
+        <m.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="max-w-2xl"
+        >
+          <div className="inline-flex items-center gap-3 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)]/75 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--text-secondary)] backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-[var(--color-brand)] shadow-[0_0_0_6px_rgba(0,248,8,0.08)]"></span>
+            {t('hero.kicker')}
+          </div>
+
+          <div className="mt-8 flex items-center gap-4">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--color-brand)] to-[var(--text-secondary)] p-[2px] shrink-0 shadow-lg shadow-[var(--color-brand)]/20">
+              <img
+                src="https://github.com/mafhper.png"
+                alt="@mafhper"
+                width="64"
+                height="64"
+                fetchPriority="high"
+                className="w-full h-full rounded-full object-cover bg-[var(--bg-primary)]"
+              />
+            </div>
+            <p className="text-sm md:text-base text-[var(--text-secondary)]">
               {t('hero.greeting')}{' '}
               <span className="font-semibold text-[var(--text-primary)]">Matheus Pereira</span>
             </p>
+          </div>
 
-            {/* Avatar & Title Group */}
-            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 mb-8">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[var(--color-brand)] to-[var(--text-secondary)] p-0.5 transition-transform duration-500 hover:scale-105 shrink-0 shadow-lg shadow-[var(--color-brand)]/20">
-                <img
-                  src="https://github.com/mafhper.png"
-                  alt="@mafhper"
-                  width="96"
-                  height="96"
-                  fetchPriority="high"
-                  className="w-full h-full rounded-full object-cover bg-[var(--bg-primary)]"
-                />
+          <h1 className="mt-6 text-6xl sm:text-7xl lg:text-8xl font-bold tracking-[-0.06em] leading-[0.92] text-balance">
+            <span className="bg-gradient-to-r from-[var(--text-primary)] via-[var(--accent-primary)] to-[var(--text-secondary)] bg-clip-text text-transparent">
+              @mafhper
+            </span>
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-2xl md:text-3xl leading-tight text-[var(--text-primary)] text-pretty">
+            {t('hero.tagline')}
+          </p>
+
+          <p className="mt-5 max-w-xl text-base md:text-lg leading-8 text-[var(--text-secondary)] text-pretty">
+            {t('hero.description')}
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold text-base hover:-translate-y-0.5 transition-transform shadow-lg shadow-[var(--accent-primary)]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
+            >
+              {t('hero.primaryCta')} <ArrowRight size={20} />
+            </a>
+
+            <a
+              href="https://github.com/mafhper"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)]/70 text-[var(--text-primary)] font-semibold hover:border-[var(--accent-primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
+            >
+              <Github size={18} />
+              {t('hero.secondaryCta')}
+            </a>
+          </div>
+        </m.div>
+
+        <div className="w-full lg:justify-self-end">
+          <div className="flex flex-col gap-4">
+            <div className="w-full max-w-2xl perspective-2000 relative">
+              {motionReady && !reduceMotion ? (
+                <ProjectCardAnimated currentProject={currentProject} />
+              ) : (
+                <ProjectCardStatic currentProject={currentProject} />
+              )}
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
+              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)]/70 p-5 backdrop-blur">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                  {t('hero.featuredNow')}
+                </p>
+                <h2 className="mt-3 text-2xl font-semibold text-[var(--text-primary)]">
+                  {currentProject.name}
+                </h2>
+                <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t(currentProject.descriptionKey)}
+                </p>
               </div>
 
-              <h1 className="text-6xl sm:text-7xl font-bold tracking-tighter leading-[0.9]">
-                <span className="bg-gradient-to-r from-[var(--text-primary)] via-[var(--color-brand)] to-[var(--text-muted)] bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">
-                  @mafhper
-                </span>
-              </h1>
+              <div className="rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-card)]/70 p-5 backdrop-blur">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                  {t('hero.stackLabel')}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {currentProject.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-[var(--bg-primary)]/80 px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-
-            <p className="text-xl md:text-2xl text-[var(--text-secondary)] mb-10 leading-relaxed max-w-lg font-light">
-              {t('hero.tagline')}
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-              <m.a
-                href="https://github.com/mafhper"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-[var(--accent-primary)]/20"
-              >
-                GitHub <ArrowRight size={22} />
-              </m.a>
-            </div>
-          </m.div>
-        </div>
-
-        {/* Dynamic Project Showcase Card */}
-        <div className="flex-1 w-full max-w-2xl perspective-2000 z-10 relative">
-          {motionReady && !reduceMotion ? (
-            <ProjectCardAnimated currentProject={currentProject} />
-          ) : (
-            <ProjectCardStatic currentProject={currentProject} />
-          )}
+          </div>
         </div>
       </div>
     </section>

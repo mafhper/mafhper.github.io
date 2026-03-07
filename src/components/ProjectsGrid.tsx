@@ -8,18 +8,32 @@ export const ProjectsGrid: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="scroll-mt-24 py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end"
         >
-          <h2 className="text-3xl font-bold flex items-center gap-4">
-            <span className="w-10 h-1 bg-[var(--accent-primary)] rounded-full"></span>
-            {t('projects.title')}
-          </h2>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-4 text-balance">
+              <span className="w-10 h-1 bg-[var(--accent-primary)] rounded-full"></span>
+              {t('projects.title')}
+            </h2>
+            <p className="mt-5 max-w-2xl text-base md:text-lg leading-8 text-[var(--text-secondary)] text-pretty">
+              {t('projects.intro')}
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/mafhper?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex items-center gap-2 text-[var(--accent-primary)] hover:text-[var(--accent-highlight)] font-semibold transition-colors rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
+          >
+            {t('projects.viewAll')} <ArrowUpRight size={18} />
+          </a>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -33,7 +47,7 @@ export const ProjectsGrid: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group block rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--accent-primary)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+              className="group block rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--accent-primary)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             >
               {/* Project Visual Banner */}
               <div
@@ -90,12 +104,12 @@ export const ProjectsGrid: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-14 text-center">
+        <div className="mt-14 text-center lg:hidden">
           <a
             href="https://github.com/mafhper?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[var(--accent-primary)] hover:text-[var(--accent-highlight)] font-semibold transition-colors"
+            className="inline-flex items-center gap-2 text-[var(--accent-primary)] hover:text-[var(--accent-highlight)] font-semibold transition-colors rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
           >
             {t('projects.viewAll')} <ArrowUpRight size={18} />
           </a>

@@ -1,11 +1,21 @@
 {
   "brand": "@mafhper",
   "hero": {
+    "kicker": "Personal projects",
     "greeting": "Hello, I'm",
     "role": "Full Stack Developer",
-    "tagline": "I build accessible, pixel-perfect, and performant web experiences.",
-    "viewWork": "View My Work",
-    "viewProject": "View Project"
+    "tagline": "I make sites, tools, and experiments out of curiosity and enjoyment of the process.",
+    "description": "This space collects open source projects and visual studies I have been building in my spare time, usually mixing web, interface work, and technical exploration.",
+    "primaryCta": "View projects",
+    "secondaryCta": "GitHub",
+    "featuredNow": "Currently rotating",
+    "stackLabel": "Project stack",
+    "stats": {
+      "projects": "featured projects",
+      "locales": "languages",
+      "focusValue": "Web • Data • IoT",
+      "focusLabel": "active lanes"
+    }
   },
   "about": {
     "title": "About",
@@ -18,22 +28,96 @@
   },
   "projects": {
     "title": "Open Source Projects",
+    "intro": "A selection of open source projects I have been building and refining through curiosity, usefulness, and a fondness for interface work.",
     "viewAll": "View all on GitHub",
-    "comingSoon": "Coming Soon...",
-    "comingSoonDesc": "Open Source CMS, Advanced Markdown Editor, Designer Toolkit Suite, and more projects underway.",
+    "featuredLabel": "Featured project",
+    "viewSource": "View source",
+    "liveDemo": "Live demo",
+    "aurawall": "Abstract wallpaper generator with gesture support and dynamic color systems.",
+    "personalnews": "Privacy-focused news aggregator with clean design and local-first AI support.",
+    "spread": "Tool for creating and sharing visually rich content cards.",
+    "imaginizim": "Client-side image optimizer focused on performance and privacy.",
+    "fremit": "Code mockup editor with theme support and high-resolution export.",
     "markLee": "Desktop Markdown editor focused on flow, real-time preview, and polished PDF export.",
     "kaesKeideInspector": "Browser extension for inspecting CSS, HTML, accessibility, assets, and the full technology stack of any site."
   },
   "activity": {
-    "title": "Recent Activity",
-    "pushedTo": "pushed to",
-    "timeAgo": "{{time}} ago"
+    "title": "Coding Pulse",
+    "subtitle": "Recent public GitHub events and a few repositories I still keep tinkering with as a hobby.",
+    "statusTitle": "In focus now",
+    "statusIntro": "These repositories are shaping the current design, technical baseline, and next experiments.",
+    "liveLabel": "live github feed",
+    "loading": "Loading public activity…",
+    "error": "Could not load activity right now.",
+    "empty": "No recent events at the moment.",
+    "now": "just now",
+    "focusTitle": "Focus repos",
+    "runtimeTitle": "Runtime",
+    "runtimeIntro": "Tools and infrastructure currently powering this site.",
+    "runtime": {
+      "infra": "Infra",
+      "ui": "UI",
+      "packageManager": "Packages"
+    },
+    "actions": {
+      "push": "pushed to",
+      "watch": "starred",
+      "create": "created",
+      "fork": "forked",
+      "pullRequestOpened": "opened PR in",
+      "pullRequestMerged": "merged PR in",
+      "issueOpened": "opened issue in",
+      "issueClosed": "closed issue in",
+      "updated": "updated"
+    }
   },
   "techStack": {
-    "title": "Technologies"
+    "eyebrow": "Operating model",
+    "title": "Tech Stack",
+    "description": "A few areas and tools I tend to explore whenever I am building things for my own interest.",
+    "introTitle": "How I work",
+    "introText": "I prefer readable interfaces, systems that stay easy to evolve, and tooling that never gets in the way of shipping. The stack serves the product, not the reverse.",
+    "principles": {
+      "performance": {
+        "title": "Performance with intent",
+        "description": "Optimization starts early to preserve flow, not as a late patch."
+      },
+      "clarity": {
+        "title": "Interface clarity",
+        "description": "Hierarchy, contrast, and language should remove real friction."
+      },
+      "delivery": {
+        "title": "Delivery that scales",
+        "description": "I structure code and tooling so the project stays malleable after v1."
+      }
+    },
+    "areas": {
+      "frontend": {
+        "label": "Interface",
+        "title": "Frontend",
+        "summary": "Web experiences with visual rhythm, responsiveness, and predictable engineering."
+      },
+      "backend": {
+        "label": "Services",
+        "title": "Backend",
+        "summary": "APIs and data layers with simple modeling, observability, and low operational drag."
+      },
+      "systems": {
+        "label": "Low level",
+        "title": "Systems",
+        "summary": "Rust, embedded work, and hardware-facing experiments when the problem needs proximity to the system."
+      },
+      "tools": {
+        "label": "Delivery",
+        "title": "Tools",
+        "summary": "Build, automation, and environment tooling that reduce the gap between idea, iteration, and deploy."
+      }
+    }
   },
   "footer": {
+    "tagline": "A place to gather interfaces, tools, and experiments I have made over time.",
     "philosophy": "I believe in a free and accessible web for all.",
-    "copyright": "(c) {{year}} Matheus Pereira. All rights reserved."
+    "copyright": "© {{year}} @mafhper.",
+    "rights": "All rights reserved."
   }
 }

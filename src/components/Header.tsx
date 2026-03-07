@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Globe, Github } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,36 +9,23 @@ const languages = [
   { code: 'es', label: 'ES' }
 ];
 
+const getInitialTheme = (): 'light' | 'dark' => {
+  if (typeof window === 'undefined') {
+    return 'dark';
+  }
+
+  const saved = window.localStorage.getItem('theme') as 'light' | 'dark' | null;
+  return saved ?? 'dark';
+};
+
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
-  // Lazy initialize theme from localStorage
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme') as 'light' | 'dark' | null;
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-        return saved;
-      }
-    }
-    document.documentElement.removeAttribute('data-theme');
-    return 'system';
-  });
-
+  const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme);
   const [isLangOpen, setIsLangOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -56,23 +43,24 @@ export const Header: React.FC = () => {
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[var(--bg-primary)]/90 border-b border-[var(--border-subtle)] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center cursor-pointer hover:opacity-80 transition-opacity"
+        <a
+          href="#top"
+          className="flex items-center cursor-pointer rounded-full hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
+          aria-label={t('brand')}
         >
           <img src="/logo.svg" alt="mafhper" className="h-9 w-9" />
-        </button>
+        </a>
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-10">
           {['projects', 'techStack', 'activity'].map((item) => (
-            <button
+            <a
               key={item}
-              onClick={() => scrollToSection(item)}
-              className="text-[10px] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors uppercase tracking-[0.2em]"
+              href={`#${item}`}
+              className="text-[10px] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors uppercase tracking-[0.2em] rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             >
               {t(`nav.${item}`)}
-            </button>
+            </a>
           ))}
         </nav>
 
@@ -82,7 +70,7 @@ export const Header: React.FC = () => {
             href="https://github.com/mafhper"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors"
+            className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             aria-label="GitHub Profile"
           >
             <Github size={20} />
@@ -92,8 +80,10 @@ export const Header: React.FC = () => {
           <div className="relative">
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors flex items-center gap-2"
+              className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
               aria-label="Change Language"
+              aria-expanded={isLangOpen}
+              aria-haspopup="menu"
             >
               <Globe size={20} />
               <span className="text-sm font-medium uppercase">{i18n.language.split('-')[0]}</span>
@@ -111,7 +101,7 @@ export const Header: React.FC = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--bg-secondary)] transition-colors ${
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--bg-secondary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent-primary)] ${
                         i18n.language === lang.code ? 'text-[var(--color-brand)] font-bold' : ''
                       }`}
                     >
@@ -126,10 +116,10 @@ export const Header: React.FC = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors"
+            className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             aria-label="Toggle Theme"
           >
-            {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
         </div>
       </div>
