@@ -25,7 +25,9 @@
     "personalnews": "Agregador de notícias focado em privacidade, design limpo e IA local.",
     "spread": "Ferramenta para criar e compartilhar cartões de conteúdo visualmente ricos.",
     "imaginizim": "Otimizador de imagens client-side com foco em performance e privacidade.",
-    "fremit": "Editor de mockups de código com suporte a temas e exportação em alta resolução."
+    "fremit": "Editor de mockups de código com suporte a temas e exportação em alta resolução.",
+    "markLee": "Editor Markdown desktop com foco, preview em tempo real e exportação profissional para PDF.",
+    "kaesKeideInspector": "Extensão para inspecionar CSS, HTML, acessibilidade, assets e stack tecnológica de qualquer site."
   },
   "activity": {
     "title": "Coding Pulse",

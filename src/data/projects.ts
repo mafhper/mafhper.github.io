@@ -55,13 +55,23 @@ export const projects: Project[] = [
     demoUrl: 'https://mafhper.github.io/imaginizim'
   },
   {
-    id: 'fremit',
-    name: 'fremit',
-    descriptionKey: 'projects.fremit',
+    id: 'mark-lee',
+    name: 'Mark-Lee',
+    descriptionKey: 'projects.markLee',
     color: '#6FA99F',
-    tech: ['TypeScript', 'Mockup'],
-    stars: 32,
-    logoUrl: '/projects/fremit/logo.svg',
-    demoUrl: 'https://mafhper.github.io/fremit'
+    tech: ['TypeScript', 'React 19', 'Tauri 2'],
+    stars: 0,
+    logoUrl: '/projects/mark-lee/logo.svg',
+    demoUrl: 'https://mafhper.github.io/mark-lee/'
+  },
+  {
+    id: 'kaes-keide-inspector',
+    name: 'Kaes Keide Inspector',
+    descriptionKey: 'projects.kaesKeideInspector',
+    color: '#C78F3C',
+    tech: ['TypeScript', 'React 19', 'Chrome Extension'],
+    stars: 0,
+    logoUrl: '/projects/kaes-keide-inspector/logo.svg',
+    demoUrl: 'https://mafhper.github.io/kaes-keide-inspector/'
   }
 ];

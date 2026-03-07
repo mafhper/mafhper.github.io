@@ -15,7 +15,7 @@ export default defineConfig({
   preview: {
     host: true,
     strictPort: false,
-    port: 4200
+    port: 4300
   },
   build: {
     rollupOptions: {

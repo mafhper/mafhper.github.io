@@ -12,7 +12,9 @@
   },
   "projects": {
     "title": "Proyectos Destacados",
-    "viewAll": "Ver todos en GitHub"
+    "viewAll": "Ver todos en GitHub",
+    "markLee": "Editor Markdown de escritorio enfocado en concentración, vista previa en tiempo real y exportación PDF cuidada.",
+    "kaesKeideInspector": "Extensión para inspeccionar CSS, HTML, accesibilidad, assets y la stack tecnológica completa de cualquier sitio."
   },
   "activity": {
     "title": "Actividad Reciente",

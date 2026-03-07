@@ -28,8 +28,26 @@ stats.html
 
 # Dev & Quality Tools (Guidelines)
 _dev/
-quality-core/
-performance-reports/
+performance-reports/*
 .gemini/
 .agent/
 .agents/
+
+# Codex local private files
+AGENTS.md
+.codex/
+.dev/
+.claude/
+.qwen/
+.kimi/
+
+# Codex local private files
+.gemini-clipboard/
+.roo/
+.cursor/
+.windsurf/
+.claude-code/
+GEMINI.md
+CLAUDE.md
+QWEN.md
+KIMI.md

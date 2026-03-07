@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/projects';
 
 export const ProjectsGrid: React.FC = () => {
@@ -88,23 +88,6 @@ export const ProjectsGrid: React.FC = () => {
               </div>
             </motion.a>
           ))}
-
-          {/* Coming Soon Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="rounded-2xl bg-[var(--bg-card)] border border-dashed border-[var(--border-subtle)] p-8 flex flex-col items-center justify-center text-center min-h-[280px]"
-          >
-            <Sparkles size={32} className="text-[var(--accent-primary)] mb-4" />
-            <h3 className="text-lg font-bold mb-3 text-[var(--text-primary)]">
-              {t('projects.comingSoon')}
-            </h3>
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed max-w-xs">
-              {t('projects.comingSoonDesc')}
-            </p>
-          </motion.div>
         </div>
 
         <div className="mt-14 text-center">

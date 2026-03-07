@@ -20,7 +20,9 @@
     "title": "Open Source Projects",
     "viewAll": "View all on GitHub",
     "comingSoon": "Coming Soon...",
-    "comingSoonDesc": "Open Source CMS, Advanced Markdown Editor, Designer Toolkit Suite, and more projects underway."
+    "comingSoonDesc": "Open Source CMS, Advanced Markdown Editor, Designer Toolkit Suite, and more projects underway.",
+    "markLee": "Desktop Markdown editor focused on flow, real-time preview, and polished PDF export.",
+    "kaesKeideInspector": "Browser extension for inspecting CSS, HTML, accessibility, assets, and the full technology stack of any site."
   },
   "activity": {
     "title": "Recent Activity",
