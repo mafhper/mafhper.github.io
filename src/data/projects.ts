@@ -20,7 +20,7 @@ export const projects: Project[] = [
     color: '#347B66',
     tech: ['TypeScript', 'React', 'Canvas'],
     stars: 124,
-    logoUrl: '/projects/aurawall/logo.png',
+    logoUrl: '/projects/aurawall/logo.svg',
     previewUrl: '/projects/aurawall/preview.jpg',
     demoUrl: 'https://mafhper.github.io/aurawall'
   },
