@@ -38,13 +38,20 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
 
           <div className="absolute inset-0 flex items-center justify-center px-16 pt-10 pb-16 sm:px-20">
             {currentProject.logoUrl ? (
-              <img
-                src={currentProject.logoUrl}
-                alt={currentProject.name}
-                width="128"
-                height="128"
-                className="w-28 h-28 object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500 sm:w-32 sm:h-32"
-              />
+              <div
+                style={{
+                  transform: `scale(${currentProject.featuredLogoScale ?? 1})`,
+                  transformOrigin: 'center'
+                }}
+              >
+                <img
+                  src={currentProject.logoUrl}
+                  alt={currentProject.name}
+                  width="128"
+                  height="128"
+                  className="block h-32 w-auto max-w-[10rem] object-contain drop-shadow-2xl group-hover:scale-110 transition-transform duration-500 sm:h-36 sm:max-w-[11rem]"
+                />
+              </div>
             ) : (
               <div className="text-white/30 font-mono text-sm uppercase tracking-widest border border-dashed border-white/30 px-6 py-4 rounded">
                 [Project: {currentProject.name}]

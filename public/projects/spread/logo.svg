@@ -1,12 +1,38 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#59b1f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    <linearGradient id="badgeGradient" x1="16" y1="112" x2="112" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F97316" />
+      <stop offset="0.38" stop-color="#A855F7" />
+      <stop offset="0.72" stop-color="#EC4899" />
+      <stop offset="1" stop-color="#FACC15" />
     </linearGradient>
+    <linearGradient id="symbolGradient" x1="38" y1="82" x2="90" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38BDF8" />
+      <stop offset="1" stop-color="#8B5CF6" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(48)">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.24" />
+      <stop offset="0.48" stop-color="#A855F7" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="innerShade" x1="30" y1="30" x2="98" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="glow" x="8" y="8" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur" />
+    </filter>
   </defs>
-  <path d="M12 9C10.3431 9 9 7.65685 9 6C9 4.34315 10.3431 3 12 3C13.6569 3 15 4.34315 15 6C15 7.65685 13.6569 9 12 9Z" stroke="url(#logoGradient)" stroke-width="1.5"/>
-  <path d="M5.5 21C3.84315 21 2.5 19.6569 2.5 18C2.5 16.3431 3.84315 15 5.5 15C7.15685 15 8.5 16.3431 8.5 18C8.5 19.6569 7.15685 21 5.5 21Z" stroke="url(#logoGradient)" stroke-width="1.5"/>
-  <path d="M18.5 21C16.8431 21 15.5 19.6569 15.5 18C15.5 16.3431 16.8431 15 18.5 15C20.1569 15 21.5 16.3431 21.5 18C21.5 19.6569 20.1569 21 18.5 21Z" stroke="url(#logoGradient)" stroke-width="1.5"/>
-  <path d="M20 13C20 10.6106 18.9525 8.46589 17.2916 7M4 13C4 10.6106 5.04752 8.46589 6.70838 7M10 20.748C10.6392 20.9125 11.3094 21 12 21C12.6906 21 13.3608 20.9125 14 20.748" stroke="url(#logoGradient)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <circle cx="64" cy="64" r="44" fill="url(#glowGradient)" filter="url(#glow)" />
+  <rect x="24" y="24" width="80" height="80" rx="22" fill="#05070D" />
+  <rect x="22.5" y="22.5" width="83" height="83" rx="23.5" stroke="url(#badgeGradient)" stroke-width="3" />
+  <rect x="27" y="27" width="74" height="74" rx="19" fill="url(#innerShade)" fill-opacity="0.08" />
+
+  <path d="M64 56.5C58.201 56.5 53.5 51.799 53.5 46C53.5 40.201 58.201 35.5 64 35.5C69.799 35.5 74.5 40.201 74.5 46C74.5 51.799 69.799 56.5 64 56.5Z" stroke="url(#symbolGradient)" stroke-width="4" />
+  <path d="M43 87.5C37.201 87.5 32.5 82.799 32.5 77C32.5 71.201 37.201 66.5 43 66.5C48.799 66.5 53.5 71.201 53.5 77C53.5 82.799 48.799 87.5 43 87.5Z" stroke="url(#symbolGradient)" stroke-width="4" />
+  <path d="M85 87.5C79.201 87.5 74.5 82.799 74.5 77C74.5 71.201 79.201 66.5 85 66.5C90.799 66.5 95.5 71.201 95.5 77C95.5 82.799 90.799 87.5 85 87.5Z" stroke="url(#symbolGradient)" stroke-width="4" />
+  <path d="M88 63C88 54.637 84.333 47.131 78.519 42M40 63C40 54.637 43.667 47.131 49.481 42M56.5 84.868C58.737 85.444 61.083 85.75 63.5 85.75C65.917 85.75 68.263 85.444 70.5 84.868" stroke="url(#symbolGradient)" stroke-width="4" stroke-linecap="round" />
 </svg>

@@ -47,11 +47,19 @@ export const ProjectsGrid: React.FC = () => {
                 }}
               >
                 {project.logoUrl ? (
-                  <img
-                    src={project.logoUrl}
-                    alt={project.name}
-                    className="w-16 h-16 object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <div
+                    className="flex h-20 items-center justify-center"
+                    style={{
+                      transform: `scale(${project.gridLogoScale ?? 1})`,
+                      transformOrigin: 'center'
+                    }}
+                  >
+                    <img
+                      src={project.logoUrl}
+                      alt={project.name}
+                      className="block h-14 w-auto max-w-[5.5rem] object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
                 ) : (
                   <div className="text-white/30 text-6xl font-bold">
                     {project.name.substring(0, 2).toUpperCase()}

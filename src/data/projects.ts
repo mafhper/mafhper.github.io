@@ -6,6 +6,8 @@ export interface Project {
   tech: string[];
   stars: number;
   logoUrl?: string;
+  gridLogoScale?: number;
+  featuredLogoScale?: number;
   previewUrl?: string;
   demoUrl?: string;
 }
@@ -41,6 +43,8 @@ export const projects: Project[] = [
     tech: ['React', 'Share API'],
     stars: 45,
     logoUrl: '/projects/spread/logo.svg',
+    gridLogoScale: 1.4,
+    featuredLogoScale: 1.25,
     previewUrl: '/projects/spread/preview.png',
     demoUrl: 'https://mafhper.github.io/spread'
   },
@@ -53,6 +57,16 @@ export const projects: Project[] = [
     stars: 67,
     logoUrl: '/projects/imaginizim/logo.svg',
     demoUrl: 'https://mafhper.github.io/imaginizim'
+  },
+  {
+    id: 'fremit',
+    name: 'Fremit',
+    descriptionKey: 'projects.fremit',
+    color: '#335281',
+    tech: ['React', 'TypeScript', 'Zustand'],
+    stars: 0,
+    logoUrl: '/projects/fremit/logo.svg',
+    demoUrl: 'https://mafhper.github.io/fremit/'
   },
   {
     id: 'mark-lee',
