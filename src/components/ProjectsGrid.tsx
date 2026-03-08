@@ -43,7 +43,7 @@ export const ProjectsGrid: React.FC = () => {
               <div
                 className="h-36 relative overflow-hidden flex items-center justify-center"
                 style={{
-                  background: `linear-gradient(135deg, ${project.color}40 0%, ${project.color} 100%)`
+                  background: `linear-gradient(135deg, ${project.surfaceFrom ?? `${project.color}40`} 0%, ${project.surfaceTo ?? project.color} 100%)`
                 }}
               >
                 {project.logoUrl ? (
