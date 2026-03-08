@@ -20,10 +20,20 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-i18next', 'i18next'],
-          'animation-vendor': ['framer-motion'],
-          'ui-vendor': ['lucide-react']
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return;
+
+          if (id.includes('react-dom') || id.includes('/react/')) {
+            return 'framework';
+          }
+
+          if (id.includes('i18next') || id.includes('react-i18next')) {
+            return 'i18n';
+          }
+
+          if (id.includes('lucide-react')) {
+            return 'ui';
+          }
         }
       }
     },

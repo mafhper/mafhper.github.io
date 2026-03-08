@@ -9,6 +9,9 @@
     "primaryCta": "Ver proyectos",
     "secondaryCta": "GitHub",
     "featuredNow": "Rotando ahora",
+    "carouselSelect": "Ir a {{name}}",
+    "previousProject": "Proyecto anterior",
+    "nextProject": "Siguiente proyecto",
     "stackLabel": "Stack del proyecto",
     "stats": {
       "projects": "proyectos destacados",
@@ -44,14 +47,14 @@
   "activity": {
     "title": "Coding Pulse",
     "subtitle": "Eventos públicos recientes de GitHub y algunos repositorios en los que sigo tocando cosas por hobby.",
-    "statusTitle": "En foco ahora",
-    "statusIntro": "Estos repositorios están empujando el diseño actual, la base técnica y los próximos experimentos.",
     "liveLabel": "live github feed",
     "loading": "Cargando actividad pública…",
     "error": "No fue posible cargar la actividad ahora.",
     "empty": "No hay eventos recientes por el momento.",
     "now": "ahora",
     "focusTitle": "Repos en foco",
+    "focusLatestPush": "último push {{time}}",
+    "focusLatestActivity": "última actividad {{time}}",
     "runtimeTitle": "Runtime",
     "runtimeIntro": "Herramientas e infraestructura que sostienen este sitio hoy.",
     "runtime": {
@@ -69,6 +72,26 @@
       "issueOpened": "abrió issue en",
       "issueClosed": "cerró issue en",
       "updated": "actualizó"
+    },
+    "console": {
+      "captured": "capturados",
+      "uniqueRepos": "repos únicos",
+      "source": "origen: github public events",
+      "feedLabel": "github.public.events",
+      "liveWindow": "ventana activa",
+      "publicStream": "flujo público",
+      "commitLabel": "commit:",
+      "showMore": "ver {{count}} más",
+      "showLess": "colapsar feed",
+      "eventTypes": {
+        "push": "push",
+        "pullRequest": "pull request",
+        "issue": "issue",
+        "watch": "watch",
+        "fork": "fork",
+        "create": "create",
+        "update": "update"
+      }
     }
   },
   "techStack": {

@@ -9,6 +9,9 @@
     "primaryCta": "View projects",
     "secondaryCta": "GitHub",
     "featuredNow": "Currently rotating",
+    "carouselSelect": "Go to {{name}}",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
     "stackLabel": "Project stack",
     "stats": {
       "projects": "featured projects",
@@ -44,14 +47,14 @@
   "activity": {
     "title": "Coding Pulse",
     "subtitle": "Recent public GitHub events and a few repositories I still keep tinkering with as a hobby.",
-    "statusTitle": "In focus now",
-    "statusIntro": "These repositories are shaping the current design, technical baseline, and next experiments.",
     "liveLabel": "live github feed",
     "loading": "Loading public activity…",
     "error": "Could not load activity right now.",
     "empty": "No recent events at the moment.",
     "now": "just now",
     "focusTitle": "Focus repos",
+    "focusLatestPush": "latest push {{time}}",
+    "focusLatestActivity": "latest activity {{time}}",
     "runtimeTitle": "Runtime",
     "runtimeIntro": "Tools and infrastructure currently powering this site.",
     "runtime": {
@@ -69,6 +72,26 @@
       "issueOpened": "opened issue in",
       "issueClosed": "closed issue in",
       "updated": "updated"
+    },
+    "console": {
+      "captured": "captured",
+      "uniqueRepos": "unique repos",
+      "source": "source: github public events",
+      "feedLabel": "github.public.events",
+      "liveWindow": "live window",
+      "publicStream": "public stream",
+      "commitLabel": "commit:",
+      "showMore": "show {{count}} more",
+      "showLess": "collapse feed",
+      "eventTypes": {
+        "push": "push",
+        "pullRequest": "pull request",
+        "issue": "issue",
+        "watch": "watch",
+        "fork": "fork",
+        "create": "create",
+        "update": "update"
+      }
     }
   },
   "techStack": {

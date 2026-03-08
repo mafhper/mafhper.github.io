@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/projects';
 
@@ -8,14 +7,9 @@ export const ProjectsGrid: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="projects" className="scroll-mt-24 py-24 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end"
-        >
+        <div className="mb-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-4 text-balance">
               <span className="w-10 h-1 bg-[var(--accent-primary)] rounded-full"></span>
@@ -34,19 +28,15 @@ export const ProjectsGrid: React.FC = () => {
           >
             {t('projects.viewAll')} <ArrowUpRight size={18} />
           </a>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.a
+          {projects.map((project) => (
+            <a
               key={project.id}
               href={project.demoUrl || `https://github.com/mafhper/${project.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="group block rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--accent-primary)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             >
               {/* Project Visual Banner */}
@@ -100,7 +90,7 @@ export const ProjectsGrid: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
 

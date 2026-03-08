@@ -1,8 +1,6 @@
-import { Suspense, lazy } from 'react';
-import { LazyMotion, domAnimation } from 'framer-motion';
+import { Suspense, lazy, useEffect, useRef, useState, type ReactNode } from 'react';
 import { MainLayout } from './layouts/MainLayout';
 import { Hero } from './components/Hero';
-import './i18n';
 
 // Lazy load non-critical sections
 const ProjectsGrid = lazy(() =>
@@ -22,18 +20,65 @@ const SectionLoader = () => (
   </div>
 );
 
+const DeferredSection = ({
+  children,
+  sectionId,
+  minHeight,
+  rootMargin = '240px'
+}: {
+  children: ReactNode;
+  sectionId: string;
+  minHeight: number;
+  rootMargin?: string;
+}) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) return;
+
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [isVisible, rootMargin]);
+
+  return (
+    <div ref={ref} id={sectionId} className="scroll-mt-24">
+      {isVisible ? (
+        <Suspense fallback={<SectionLoader />}>{children}</Suspense>
+      ) : (
+        <div style={{ minHeight }} aria-hidden="true" />
+      )}
+    </div>
+  );
+};
+
 function App() {
   return (
-    <LazyMotion features={domAnimation}>
-      <MainLayout>
-        <Hero />
-        <Suspense fallback={<SectionLoader />}>
-          <ProjectsGrid />
-          <TechStack />
-          <ActivityFeed />
-        </Suspense>
-      </MainLayout>
-    </LazyMotion>
+    <MainLayout>
+      <Hero />
+      <DeferredSection sectionId="projects" minHeight={920}>
+        <ProjectsGrid />
+      </DeferredSection>
+      <DeferredSection sectionId="techStack" minHeight={760}>
+        <TechStack />
+      </DeferredSection>
+      <DeferredSection sectionId="activity" minHeight={900}>
+        <ActivityFeed />
+      </DeferredSection>
+    </MainLayout>
   );
 }
 

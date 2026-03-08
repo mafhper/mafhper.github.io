@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Layout, Server, Cpu, Layers } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const technologies = [
   {
@@ -34,14 +33,9 @@ export const TechStack: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="techStack" className="scroll-mt-24 py-24 px-6 bg-[var(--bg-secondary)]/55">
+    <section className="py-24 px-6 bg-[var(--bg-secondary)]/55">
       <div className="max-w-7xl mx-auto grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="rounded-[2rem] border border-[var(--border-subtle)] bg-[var(--bg-card)]/75 p-8 md:p-10 backdrop-blur"
-        >
+        <div className="rounded-[2rem] border border-[var(--border-subtle)] bg-[var(--bg-card)]/75 p-8 md:p-10 backdrop-blur">
           <div className="inline-flex items-center gap-3 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-primary)]/60 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--text-muted)]">
             <span className="h-2 w-2 rounded-full bg-[var(--accent-secondary)]"></span>
             {t('techStack.eyebrow')}
@@ -62,18 +56,14 @@ export const TechStack: React.FC = () => {
               {t('techStack.introText')}
             </p>
           </div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {technologies.map((tech, index) => {
+          {technologies.map((tech) => {
             const Icon = tech.icon;
             return (
-              <motion.div
+              <div
                 key={tech.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
                 className="rounded-[1.75rem] border border-[var(--border-subtle)] bg-[var(--bg-card)]/80 p-6 md:p-7 backdrop-blur"
               >
                 <div className="flex items-start justify-between gap-6">
@@ -107,7 +97,7 @@ export const TechStack: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             );
           })}
         </div>

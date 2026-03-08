@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Moon, Sun, Globe, Github } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { loadLanguage } from '../i18n';
 
 const languages = [
   { code: 'pt-BR', label: 'PT' },
@@ -34,8 +34,8 @@ export const Header: React.FC = () => {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
-  const changeLanguage = (langCode: string) => {
-    i18n.changeLanguage(langCode);
+  const changeLanguage = async (langCode: string) => {
+    await loadLanguage(langCode);
     setIsLangOpen(false);
   };
 
@@ -86,31 +86,28 @@ export const Header: React.FC = () => {
               aria-haspopup="menu"
             >
               <Globe size={20} />
-              <span className="text-sm font-medium uppercase">{i18n.language.split('-')[0]}</span>
+              <span className="text-sm font-medium uppercase">
+                {(i18n.resolvedLanguage || i18n.language).split('-')[0]}
+              </span>
             </button>
 
-            <AnimatePresence>
-              {isLangOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute right-0 mt-2 w-32 bg-[var(--bg-card)] border border-[var(--border-subtle)] rounded-lg shadow-lg overflow-hidden"
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--bg-secondary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent-primary)] ${
-                        i18n.language === lang.code ? 'text-[var(--color-brand)] font-bold' : ''
-                      }`}
-                    >
-                      {lang.label}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {isLangOpen && (
+              <div className="absolute right-0 mt-2 w-32 bg-[var(--bg-card)] border border-[var(--border-subtle)] rounded-lg shadow-lg overflow-hidden">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => void changeLanguage(lang.code)}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--bg-secondary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--accent-primary)] ${
+                      i18n.resolvedLanguage === lang.code
+                        ? 'text-[var(--color-brand)] font-bold'
+                        : ''
+                    }`}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Theme Toggle */}
