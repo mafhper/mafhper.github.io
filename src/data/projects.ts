@@ -45,14 +45,14 @@ export const projects: Project[] = [
     id: 'spread',
     name: 'spread',
     descriptionKey: 'projects.spread',
-    color: '#CFF56E',
+    color: '#6D5EF3',
     tech: ['React', 'Share API'],
     stars: 45,
     logoUrl: '/projects/spread/logo.svg',
     gridLogoScale: 1.4,
     featuredLogoScale: 1.25,
-    surfaceFrom: '#1E173D',
-    surfaceTo: '#6555D6',
+    surfaceFrom: '#141827',
+    surfaceTo: '#3C3B78',
     previewUrl: '/projects/spread/preview.png',
     demoUrl: 'https://mafhper.github.io/spread'
   },
@@ -96,12 +96,12 @@ export const projects: Project[] = [
     id: 'kaes-keide-inspector',
     name: 'Kaes Keide Inspector',
     descriptionKey: 'projects.kaesKeideInspector',
-    color: '#C78F3C',
+    color: '#C9C1B4',
     tech: ['TypeScript', 'React 19', 'Chrome Extension'],
     stars: 0,
     logoUrl: '/projects/kaes-keide-inspector/logo.svg',
-    surfaceFrom: '#7B6031',
-    surfaceTo: '#C59641',
+    surfaceFrom: '#F3EEE4',
+    surfaceTo: '#D9D1C4',
     demoUrl: 'https://mafhper.github.io/kaes-keide-inspector/'
   }
 ];
