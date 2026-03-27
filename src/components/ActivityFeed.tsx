@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 
@@ -177,27 +177,30 @@ export const ActivityFeed: React.FC = () => {
     }
   };
 
-  const getTimeAgo = (dateString: string) => {
-    const date = new Date(dateString);
-    const now = new Date();
-    const diffInSeconds = Math.floor((date.getTime() - now.getTime()) / 1000);
+  const getTimeAgo = useCallback(
+    (dateString: string) => {
+      const date = new Date(dateString);
+      const now = new Date();
+      const diffInSeconds = Math.floor((date.getTime() - now.getTime()) / 1000);
 
-    if (Math.abs(diffInSeconds) < 60) return t('activity.now');
-    if (Math.abs(diffInSeconds) < 3600)
-      return relativeTime.format(Math.round(diffInSeconds / 60), 'minute');
-    if (Math.abs(diffInSeconds) < 86400)
-      return relativeTime.format(Math.round(diffInSeconds / 3600), 'hour');
-    if (Math.abs(diffInSeconds) < 604800)
-      return relativeTime.format(Math.round(diffInSeconds / 86400), 'day');
+      if (Math.abs(diffInSeconds) < 60) return t('activity.now');
+      if (Math.abs(diffInSeconds) < 3600)
+        return relativeTime.format(Math.round(diffInSeconds / 60), 'minute');
+      if (Math.abs(diffInSeconds) < 86400)
+        return relativeTime.format(Math.round(diffInSeconds / 3600), 'hour');
+      if (Math.abs(diffInSeconds) < 604800)
+        return relativeTime.format(Math.round(diffInSeconds / 86400), 'day');
 
-    return new Intl.DateTimeFormat(
-      i18n.resolvedLanguage === 'pt' ? 'pt-BR' : i18n.resolvedLanguage,
-      {
-        day: '2-digit',
-        month: 'short'
-      }
-    ).format(date);
-  };
+      return new Intl.DateTimeFormat(
+        i18n.resolvedLanguage === 'pt' ? 'pt-BR' : i18n.resolvedLanguage,
+        {
+          day: '2-digit',
+          month: 'short'
+        }
+      ).format(date);
+    },
+    [i18n.resolvedLanguage, relativeTime, t]
+  );
 
   const focusRepos = useMemo<FocusRepo[]>(() => {
     const latestUniqueRelevantRepos = events

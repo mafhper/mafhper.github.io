@@ -46,5 +46,25 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.54.0",
     "vite": "^7.3.1"
+  },
+  "overrides": {
+    "flat-cache": {
+      "flatted": "^3.4.2"
+    },
+    "micromatch": {
+      "picomatch": "^2.3.2"
+    },
+    "vite": {
+      "picomatch": "^4.0.4"
+    },
+    "fdir": {
+      "picomatch": "^4.0.4"
+    },
+    "tinyglobby": {
+      "picomatch": "^4.0.4"
+    },
+    "rollup-plugin-visualizer": {
+      "picomatch": "^4.0.4"
+    }
   }
 }
