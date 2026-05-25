@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Moon, Sun, Globe, Github } from 'lucide-react';
+import { Moon, Sun, Globe, Code2 } from 'lucide-react';
 import { loadLanguage } from '../i18n';
 
 const languages = [
@@ -73,7 +73,7 @@ export const Header: React.FC = () => {
             className="p-2 rounded-md hover:bg-[var(--bg-card)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             aria-label="GitHub Profile"
           >
-            <Github size={20} />
+            <Code2 size={20} />
           </a>
 
           {/* Language Selector */}

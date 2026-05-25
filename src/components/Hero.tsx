@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Github } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Code2 } from 'lucide-react';
 import { projects as featuredProjects } from '../data/projects';
 import { ProjectCardStatic } from './ProjectCardStatic';
 
@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-4 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)]/70 text-[var(--text-primary)] font-semibold hover:border-[var(--accent-primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             >
-              <Github size={18} />
+              <Code2 size={18} />
               {t('hero.secondaryCta')}
             </a>
           </div>

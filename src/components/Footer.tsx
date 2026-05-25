@@ -1,14 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Github, Twitter } from 'lucide-react';
+import { Code2, X } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/mafhper', label: 'GitHub' },
-    { icon: Twitter, href: 'https://twitter.com/mafhper', label: 'X (Twitter)' }
+    { icon: Code2, href: 'https://github.com/mafhper', label: 'GitHub' },
+    { icon: X, href: 'https://twitter.com/mafhper', label: 'X (Twitter)' }
   ];
 
   return (
