@@ -42,7 +42,8 @@
     "imaginizim": "Client-side image optimizer focused on performance and privacy.",
     "fremit": "Code mockup editor with theme support and high-resolution export.",
     "markLee": "Desktop Markdown editor focused on flow, real-time preview, and polished PDF export.",
-    "kaesKeideInspector": "Browser extension for inspecting CSS, HTML, accessibility, assets, and the full technology stack of any site."
+    "kaesKeideInspector": "Browser extension for inspecting CSS, HTML, accessibility, assets, and the full technology stack of any site.",
+    "sonaraHub": "Local creative studio to organize audio packages and generate reactive ambient videos from your albums, without uploads or cloud dependency."
   },
   "activity": {
     "title": "Coding Pulse",

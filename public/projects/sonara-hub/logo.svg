@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sonara Hub mark</title>
+  <desc id="desc">A luminous audio wave rising into a vertical aurora peak.</desc>
+  <defs>
+    <radialGradient id="bg" cx="42%" cy="36%" r="72%">
+      <stop offset="0" stop-color="#113946" />
+      <stop offset=".44" stop-color="#080d18" />
+      <stop offset="1" stop-color="#06060a" />
+    </radialGradient>
+    <linearGradient id="aura" x1="62" y1="268" x2="456" y2="268" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#31f1dc" stop-opacity=".14" />
+      <stop offset=".28" stop-color="#31f1dc" stop-opacity=".82" />
+      <stop offset=".55" stop-color="#f9fbff" stop-opacity=".9" />
+      <stop offset=".78" stop-color="#7d45ff" stop-opacity=".76" />
+      <stop offset="1" stop-color="#7d45ff" stop-opacity=".12" />
+    </linearGradient>
+    <linearGradient id="wave" x1="54" y1="300" x2="470" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".2" />
+      <stop offset=".2" stop-color="#ffffff" />
+      <stop offset=".47" stop-color="#ffffff" />
+      <stop offset=".74" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".32" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-40%" width="160%" height="190%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feColorMatrix
+        in="blur"
+        result="colored"
+        values="0 0 0 0 0.15 0 0 0 0 0.92 0 0 0 0 0.84 0 0 0 0.78 0"
+      />
+      <feMerge>
+        <feMergeNode in="colored" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="violetGlow" x="-30%" y="-40%" width="160%" height="190%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feColorMatrix
+        in="blur"
+        result="colored"
+        values="0 0 0 0 0.47 0 0 0 0 0.2 0 0 0 0 1 0 0 0 0.68 0"
+      />
+      <feMerge>
+        <feMergeNode in="colored" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="92" fill="url(#bg)" />
+  <path
+    d="M206 118c35 64 22 143-22 184-34 31-76 19-111 26 62 0 79-32 128-14 34 13 41 61 81 59 45-2 53-79 86-102 30 18 36 62 84 55 23-3 34-17 60-20-45-12-60 11-90 4-57-13-63-102-105-189-13 79-33 133-66 160-29 24-60 20-79 5 37-11 58-42 64-92 4-34-5-66-30-76Z"
+    fill="url(#aura)"
+    opacity=".9"
+    filter="url(#glow)"
+  />
+  <path
+    d="M55 320c48 0 73-30 116-20 36 8 46 58 84 62 45 5 59-78 94-110 31 17 38 67 85 66 30-1 49-24 83-14-51-27-73 10-113 1-56-12-69-111-109-197-5 111-32 170-76 188-39 16-60-19-105-7-30 8-53 31-59 31Z"
+    fill="url(#wave)"
+    filter="url(#violetGlow)"
+  />
+  <rect x="1.5" y="1.5" width="509" height="509" rx="90" fill="none" stroke="#ffffff" stroke-opacity=".16" stroke-width="3" />
+</svg>

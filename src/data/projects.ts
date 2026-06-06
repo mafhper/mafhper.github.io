@@ -29,6 +29,54 @@ export const projects: Project[] = [
     demoUrl: 'https://mafhper.github.io/aurawall'
   },
   {
+    id: 'fremit',
+    name: 'Fremit',
+    descriptionKey: 'projects.fremit',
+    color: '#335281',
+    tech: ['React', 'TypeScript', 'Zustand'],
+    stars: 0,
+    logoUrl: '/projects/fremit/logo.svg',
+    surfaceFrom: '#263F5D',
+    surfaceTo: '#6886B0',
+    demoUrl: 'https://mafhper.github.io/fremit/'
+  },
+  {
+    id: 'imaginizim',
+    name: 'imaginizim',
+    descriptionKey: 'projects.imaginizim',
+    color: '#347B66',
+    tech: ['JavaScript', 'Compression'],
+    stars: 67,
+    logoUrl: '/projects/imaginizim/logo.svg',
+    surfaceFrom: '#1A1B24',
+    surfaceTo: '#4E4279',
+    demoUrl: 'https://mafhper.github.io/imaginizim'
+  },
+  {
+    id: 'kaes-keide-inspector',
+    name: 'Kaes Keide Inspector',
+    descriptionKey: 'projects.kaesKeideInspector',
+    color: '#C9C1B4',
+    tech: ['TypeScript', 'React 19', 'Chrome Extension'],
+    stars: 0,
+    logoUrl: '/projects/kaes-keide-inspector/logo.svg',
+    surfaceFrom: '#F3EEE4',
+    surfaceTo: '#D9D1C4',
+    demoUrl: 'https://mafhper.github.io/kaes-keide-inspector/'
+  },
+  {
+    id: 'mark-lee',
+    name: 'Mark-Lee',
+    descriptionKey: 'projects.markLee',
+    color: '#6FA99F',
+    tech: ['TypeScript', 'React 19', 'Tauri 2'],
+    stars: 0,
+    logoUrl: '/projects/mark-lee/logo.svg',
+    surfaceFrom: '#67817B',
+    surfaceTo: '#B1C0B8',
+    demoUrl: 'https://mafhper.github.io/mark-lee/'
+  },
+  {
     id: 'personalnews',
     name: 'personalnews',
     descriptionKey: 'projects.personalnews',
@@ -40,6 +88,18 @@ export const projects: Project[] = [
     surfaceTo: '#C62E23',
     previewUrl: '/projects/personalnews/preview.jpg',
     demoUrl: 'https://mafhper.github.io/personalnews'
+  },
+  {
+    id: 'sonara-hub',
+    name: 'Sonara Hub',
+    descriptionKey: 'projects.sonaraHub',
+    color: '#31f1dc',
+    tech: ['TypeScript', 'React', 'Web Audio API', 'Canvas'],
+    stars: 0,
+    logoUrl: '/projects/sonara-hub/logo.svg',
+    surfaceFrom: '#06060a',
+    surfaceTo: '#113946',
+    demoUrl: 'https://mafhper.github.io/sonara_hub/'
   },
   {
     id: 'spread',
@@ -55,53 +115,5 @@ export const projects: Project[] = [
     surfaceTo: '#3C3B78',
     previewUrl: '/projects/spread/preview.png',
     demoUrl: 'https://mafhper.github.io/spread'
-  },
-  {
-    id: 'imaginizim',
-    name: 'imaginizim',
-    descriptionKey: 'projects.imaginizim',
-    color: '#347B66',
-    tech: ['JavaScript', 'Compression'],
-    stars: 67,
-    logoUrl: '/projects/imaginizim/logo.svg',
-    surfaceFrom: '#1A1B24',
-    surfaceTo: '#4E4279',
-    demoUrl: 'https://mafhper.github.io/imaginizim'
-  },
-  {
-    id: 'fremit',
-    name: 'Fremit',
-    descriptionKey: 'projects.fremit',
-    color: '#335281',
-    tech: ['React', 'TypeScript', 'Zustand'],
-    stars: 0,
-    logoUrl: '/projects/fremit/logo.svg',
-    surfaceFrom: '#263F5D',
-    surfaceTo: '#6886B0',
-    demoUrl: 'https://mafhper.github.io/fremit/'
-  },
-  {
-    id: 'mark-lee',
-    name: 'Mark-Lee',
-    descriptionKey: 'projects.markLee',
-    color: '#6FA99F',
-    tech: ['TypeScript', 'React 19', 'Tauri 2'],
-    stars: 0,
-    logoUrl: '/projects/mark-lee/logo.svg',
-    surfaceFrom: '#67817B',
-    surfaceTo: '#B1C0B8',
-    demoUrl: 'https://mafhper.github.io/mark-lee/'
-  },
-  {
-    id: 'kaes-keide-inspector',
-    name: 'Kaes Keide Inspector',
-    descriptionKey: 'projects.kaesKeideInspector',
-    color: '#C9C1B4',
-    tech: ['TypeScript', 'React 19', 'Chrome Extension'],
-    stars: 0,
-    logoUrl: '/projects/kaes-keide-inspector/logo.svg',
-    surfaceFrom: '#F3EEE4',
-    surfaceTo: '#D9D1C4',
-    demoUrl: 'https://mafhper.github.io/kaes-keide-inspector/'
   }
 ];
