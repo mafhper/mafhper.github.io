@@ -41,6 +41,20 @@ export const projects: Project[] = [
     demoUrl: 'https://mafhper.github.io/fremit/'
   },
   {
+    id: 'icon-core',
+    name: 'Icon Core',
+    descriptionKey: 'projects.iconCore',
+    color: '#74E6D4',
+    tech: ['TypeScript', 'React', 'Tauri'],
+    stars: 0,
+    logoUrl: '/projects/icon-core/logo.png',
+    gridLogoScale: 1.35,
+    featuredLogoScale: 1.2,
+    surfaceFrom: '#07131E',
+    surfaceTo: '#4E357F',
+    demoUrl: 'https://mafhper.github.io/icon-core/'
+  },
+  {
     id: 'imaginizim',
     name: 'imaginizim',
     descriptionKey: 'projects.imaginizim',
@@ -75,6 +89,20 @@ export const projects: Project[] = [
     surfaceFrom: '#67817B',
     surfaceTo: '#B1C0B8',
     demoUrl: 'https://mafhper.github.io/mark-lee/'
+  },
+  {
+    id: 'nebula',
+    name: 'Nebula',
+    descriptionKey: 'projects.nebula',
+    color: '#63D7FF',
+    tech: ['React', 'WebGL', 'Three.js', 'GLSL'],
+    stars: 0,
+    logoUrl: '/projects/nebula/logo.png',
+    gridLogoScale: 1.45,
+    featuredLogoScale: 1.3,
+    surfaceFrom: '#050816',
+    surfaceTo: '#B734C8',
+    demoUrl: 'https://mafhper.github.io/nebula/'
   },
   {
     id: 'personalnews',

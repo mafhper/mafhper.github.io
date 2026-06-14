@@ -41,7 +41,9 @@
     "spread": "Herramienta para crear y compartir tarjetas de contenido visualmente ricas.",
     "imaginizim": "Optimizador de imágenes client-side con foco en rendimiento y privacidad.",
     "fremit": "Editor de mockups de código con soporte para temas y exportación en alta resolución.",
+    "iconCore": "Workspace open source para crear, ajustar y exportar iconos de app para proyectos web y desktop.",
     "markLee": "Editor Markdown de escritorio enfocado en concentración, vista previa en tiempo real y exportación PDF cuidada.",
+    "nebula": "Showcase y playground WebGL shader-first con efectos GPU reutilizables en React y presets curados.",
     "kaesKeideInspector": "Extensión para inspeccionar CSS, HTML, accesibilidad, assets y la stack tecnológica completa de cualquier sitio.",
     "sonaraHub": "Estudio creativo local para organizar paquetes de audio y generar videos ambiente reactivos a partir de tus álbumes, sin subidas ni dependencia de la nube."
   },
