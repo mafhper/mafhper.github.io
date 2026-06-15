@@ -180,7 +180,7 @@ export const Hero: React.FC = () => {
                 <h2 className="mt-3 text-2xl font-semibold text-[var(--text-primary)]">
                   {currentProject.name}
                 </h2>
-                <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
+                <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)] line-clamp-3 min-h-[5.25rem]">
                   {t(currentProject.descriptionKey)}
                 </p>
                 <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium">
