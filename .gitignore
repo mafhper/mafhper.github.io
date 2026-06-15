@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# This project uses bun (bun.lock) as the source of truth. Ignore npm's lockfile
+# so a stray `npm install` doesn't re-commit it and re-trigger duplicate Dependabot
+# alerts (the npm tree is already covered by bun.lock).
+package-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
