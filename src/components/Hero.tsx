@@ -43,17 +43,27 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative w-full px-6 pt-12 pb-24 min-h-[calc(100vh-4rem)] flex items-center">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="hero-ambient absolute inset-0 pointer-events-none overflow-hidden"
+        style={
+          {
+            '--hero-glow-main': `${glowMain}50`,
+            '--hero-glow-accent': `${glowAccent}20`
+          } as React.CSSProperties
+        }
+      >
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 80% 70% at 70% 40%, ${glowMain}50 0%, transparent 70%)`
+            background:
+              'radial-gradient(ellipse 80% 70% at 70% 40%, var(--hero-glow-main) 0%, transparent 70%)'
           }}
         />
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(circle at 22% 24%, ${glowAccent}20 0%, transparent 36%)`
+            background:
+              'radial-gradient(circle at 22% 24%, var(--hero-glow-accent) 0%, transparent 36%)'
           }}
         />
       </div>
