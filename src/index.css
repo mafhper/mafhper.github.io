@@ -68,3 +68,31 @@ button {
   outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
 }
+
+/* Hero ambient glow — color-typed custom properties so the radial-gradient tint
+   can cross-fade between projects (raw gradients aren't interpolable, which is
+   why the color used to snap). Values are set inline per active project in
+   Hero.tsx; the transition lives here so it can respect reduced-motion. */
+@property --hero-glow-main {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+@property --hero-glow-accent {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: transparent;
+}
+
+.hero-ambient {
+  transition:
+    --hero-glow-main 700ms ease,
+    --hero-glow-accent 700ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ambient {
+    transition: none;
+  }
+}

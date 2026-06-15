@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Code2 } from 'lucide-react';
 import { projects as featuredProjects } from '../data/projects';
 import { ProjectCardStatic } from './ProjectCardStatic';
+import { toGlow } from '../lib/color';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -19,6 +20,15 @@ export const Hero: React.FC = () => {
   const currentProject = featuredProjects[currentProjectIndex];
   const totalProjects = featuredProjects.length;
 
+  // The hero ambient light echoes the active card's own surface gradient, so the
+  // glow always feels like it radiates from the card+logo on screen. surfaceTo
+  // (the card's luminous end) lights the area behind the card; surfaceFrom (its
+  // shadow end) tints the headline side. Both are normalized to stay vivid.
+  const surfaceTo = currentProject.surfaceTo ?? currentProject.color;
+  const surfaceFrom = currentProject.surfaceFrom ?? currentProject.color;
+  const glowMain = toGlow(surfaceTo, currentProject.color);
+  const glowAccent = toGlow(surfaceFrom, surfaceTo);
+
   const goToPreviousProject = () => {
     setCurrentProjectIndex((prev) => (prev - 1 + totalProjects) % totalProjects);
   };
@@ -33,17 +43,27 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative w-full px-6 pt-12 pb-24 min-h-[calc(100vh-4rem)] flex items-center">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="hero-ambient absolute inset-0 pointer-events-none overflow-hidden"
+        style={
+          {
+            '--hero-glow-main': `${glowMain}50`,
+            '--hero-glow-accent': `${glowAccent}20`
+          } as React.CSSProperties
+        }
+      >
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(ellipse 80% 70% at 70% 40%, ${currentProject.color}50 0%, transparent 70%)`
+            background:
+              'radial-gradient(ellipse 80% 70% at 70% 40%, var(--hero-glow-main) 0%, transparent 70%)'
           }}
         />
         <div
-          className="absolute inset-0 transition-opacity duration-700"
+          className="absolute inset-0"
           style={{
-            background: `radial-gradient(circle at 22% 24%, ${currentProject.color}20 0%, transparent 36%)`
+            background:
+              'radial-gradient(circle at 22% 24%, var(--hero-glow-accent) 0%, transparent 36%)'
           }}
         />
       </div>
