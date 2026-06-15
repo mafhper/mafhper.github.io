@@ -10,7 +10,7 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
     <div
       className="block relative aspect-[16/10] rounded-2xl shadow-2xl group bg-[var(--bg-card)] border border-white/10 overflow-hidden"
       style={{
-        boxShadow: `0 40px 80px -20px ${currentProject.color}40`
+        boxShadow: `0 40px 80px -20px ${currentProject.surfaceTo ?? currentProject.color}40`
       }}
     >
       <div
