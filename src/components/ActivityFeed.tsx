@@ -24,7 +24,7 @@ interface FocusRepo {
 
 const runtimeItems = [
   { labelKey: 'infra', value: 'GitHub Pages' },
-  { labelKey: 'ui', value: 'React 19 + Vite 7' },
+  { labelKey: 'ui', value: 'React 19 + Vite 8' },
   { labelKey: 'packageManager', value: 'Bun 1.3' }
 ] as const;
 

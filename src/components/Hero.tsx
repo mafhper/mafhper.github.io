@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Code2 } from 'lucide-react';
 import { projects as featuredProjects } from '../data/projects';
@@ -8,14 +8,23 @@ import { toGlow } from '../lib/color';
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const slideRef = useRef<HTMLDivElement>(null);
 
+  // Auto-advance, but never fight an engaged visitor: pause while the slide is
+  // hovered or keyboard-focused, and stay put for prefers-reduced-motion users
+  // (WCAG 2.2.2 — the glow cross-fade respecting reduced motion isn't enough; the
+  // slide swap itself must stop).
   useEffect(() => {
+    if (isPaused) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const timer = setTimeout(() => {
       setCurrentProjectIndex((prev) => (prev + 1) % featuredProjects.length);
     }, 8000);
 
     return () => clearTimeout(timer);
-  }, [currentProjectIndex]);
+  }, [currentProjectIndex, isPaused]);
 
   const currentProject = featuredProjects[currentProjectIndex];
   const totalProjects = featuredProjects.length;
@@ -41,31 +50,45 @@ export const Hero: React.FC = () => {
     setCurrentProjectIndex(index);
   };
 
+  // Pause auto-advance while the visitor is actually engaging with the slide
+  // (hovering or keyboard-focused). Native listeners on the wrapper are more
+  // reliable here than React's synthetic focus/enter events.
+  useEffect(() => {
+    const el = slideRef.current;
+    if (!el) return;
+
+    const pause = () => setIsPaused(true);
+    const resume = () => setIsPaused(false);
+    const handleFocusOut = (event: FocusEvent) => {
+      if (!el.contains(event.relatedTarget as Node | null)) setIsPaused(false);
+    };
+
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', resume);
+    el.addEventListener('focusin', pause);
+    el.addEventListener('focusout', handleFocusOut);
+
+    return () => {
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', resume);
+      el.removeEventListener('focusin', pause);
+      el.removeEventListener('focusout', handleFocusOut);
+    };
+  }, []);
+
   return (
     <section className="relative w-full px-6 pt-12 pb-24 min-h-[calc(100vh-4rem)] flex items-center">
       <div
         className="hero-ambient absolute inset-0 pointer-events-none overflow-hidden"
         style={
           {
-            '--hero-glow-main': `${glowMain}50`,
-            '--hero-glow-accent': `${glowAccent}20`
+            '--hero-glow-main': glowMain,
+            '--hero-glow-accent': glowAccent
           } as React.CSSProperties
         }
       >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(ellipse 80% 70% at 70% 40%, var(--hero-glow-main) 0%, transparent 70%)'
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(circle at 22% 24%, var(--hero-glow-accent) 0%, transparent 36%)'
-          }}
-        />
+        <div className="hero-glow-primary absolute inset-0" />
+        <div className="hero-glow-secondary absolute inset-0" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)] items-center">
@@ -127,14 +150,14 @@ export const Hero: React.FC = () => {
         </div>
 
         <div className="w-full lg:justify-self-end">
-          <div className="flex flex-col gap-4">
+          <div ref={slideRef} className="flex flex-col gap-4">
             <div className="w-full max-w-2xl perspective-2000 relative overflow-visible">
               <ProjectCardStatic currentProject={currentProject} />
               <button
                 type="button"
                 onClick={goToPreviousProject}
                 aria-label={t('hero.previousProject')}
-                className="absolute -left-5 top-1/2 z-20 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-primary)]/58 text-[var(--text-muted)] shadow-[0_10px_24px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)] sm:-left-6"
+                className="absolute -left-5 top-1/2 z-20 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)]/80 text-[var(--text-secondary)] shadow-[0_10px_24px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)] sm:-left-6"
               >
                 <ChevronLeft size={16} />
               </button>
@@ -143,7 +166,7 @@ export const Hero: React.FC = () => {
                 type="button"
                 onClick={goToNextProject}
                 aria-label={t('hero.nextProject')}
-                className="absolute -right-5 top-1/2 z-20 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-primary)]/58 text-[var(--text-muted)] shadow-[0_10px_24px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)] sm:-right-6"
+                className="absolute -right-5 top-1/2 z-20 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-card)]/80 text-[var(--text-secondary)] shadow-[0_10px_24px_rgba(0,0,0,0.18)] backdrop-blur-md transition-colors hover:border-[var(--accent-primary)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)] sm:-right-6"
               >
                 <ChevronRight size={16} />
               </button>
@@ -163,7 +186,7 @@ export const Hero: React.FC = () => {
                         className={`h-1.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)] ${
                           isActive
                             ? 'w-5 bg-[var(--accent-primary)]'
-                            : 'w-1.5 bg-white/22 hover:bg-white/40'
+                            : 'w-1.5 bg-[var(--text-secondary)]/35 hover:bg-[var(--text-secondary)]/60'
                         }`}
                       />
                     );

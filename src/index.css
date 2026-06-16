@@ -91,6 +91,43 @@ button {
     --hero-glow-accent 700ms ease;
 }
 
+/* Dark (default): the glow reads as light emanating over the near-black bg. */
+.hero-glow-primary {
+  background: radial-gradient(
+    ellipse 80% 70% at 70% 40%,
+    color-mix(in srgb, var(--hero-glow-main) 31%, transparent) 0%,
+    transparent 70%
+  );
+}
+
+.hero-glow-secondary {
+  background: radial-gradient(
+    circle at 22% 24%,
+    color-mix(in srgb, var(--hero-glow-accent) 13%, transparent) 0%,
+    transparent 36%
+  );
+}
+
+/* Light: you can't go brighter than near-white, so the card's color reads as a
+   tint instead — multiply blends the hue down into the page at higher strength. */
+[data-theme='light'] .hero-glow-primary {
+  background: radial-gradient(
+    ellipse 80% 70% at 70% 40%,
+    color-mix(in srgb, var(--hero-glow-main) 60%, transparent) 0%,
+    transparent 66%
+  );
+  mix-blend-mode: multiply;
+}
+
+[data-theme='light'] .hero-glow-secondary {
+  background: radial-gradient(
+    circle at 22% 24%,
+    color-mix(in srgb, var(--hero-glow-accent) 38%, transparent) 0%,
+    transparent 38%
+  );
+  mix-blend-mode: multiply;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-ambient {
     transition: none;
