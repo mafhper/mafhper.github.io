@@ -8,9 +8,39 @@
     <title>Matheus Pereira | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Matheus Pereira (@mafhper) - Full Stack Developer specializing in React, Node.js, and Modern Web Architecture. View my projects and activity."
+      content="Open-source projects and visual experiments by Matheus Pereira (@mafhper) — interfaces, creative tools, and coding demos."
     />
     <meta name="author" content="Matheus Pereira" />
+    <link rel="canonical" href="https://mafhper.github.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="@mafhper" />
+    <meta property="og:url" content="https://mafhper.github.io/" />
+    <meta property="og:title" content="Matheus Pereira (@mafhper)" />
+    <meta
+      property="og:description"
+      content="Open-source projects and visual experiments — interfaces, creative tools, and coding demos."
+    />
+    <meta property="og:image" content="https://mafhper.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="@mafhper — open-source projects and visual experiments"
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matheus Pereira (@mafhper)" />
+    <meta
+      name="twitter:description"
+      content="Open-source projects and visual experiments — interfaces, creative tools, and coding demos."
+    />
+    <meta name="twitter:image" content="https://mafhper.github.io/og-image.png" />
     <link rel="preconnect" href="https://avatars.githubusercontent.com" />
     <link rel="preconnect" href="https://github.com" />
     <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
@@ -18,6 +48,8 @@
       (() => {
         const savedTheme = localStorage.getItem('theme');
         document.documentElement.setAttribute('data-theme', savedTheme || 'dark');
+        const savedLang = localStorage.getItem('i18nextLng');
+        if (savedLang) document.documentElement.lang = savedLang;
       })();
     </script>
   </head>

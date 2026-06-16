@@ -20,7 +20,7 @@ export const ProjectCardStatic: React.FC<ProjectCardProps> = ({ currentProject }
         }}
       />
 
-      <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat mix-blend-overlay"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/noise.svg')] bg-repeat mix-blend-overlay"></div>
 
       <div className="absolute inset-0 flex items-center justify-center px-16 pt-10 pb-16 sm:px-20">
         {currentProject.logoUrl ? (
