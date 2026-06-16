@@ -30,74 +30,60 @@ export const ProjectsGrid: React.FC = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-3 sm:grid-cols-2">
           {projects.map((project) => (
             <a
               key={project.id}
               href={project.demoUrl || `https://github.com/mafhper/${project.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--accent-primary)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
+              className="group flex items-center gap-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-card)]/50 p-3 transition-colors duration-300 hover:border-[var(--accent-primary)] hover:bg-[var(--bg-card)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-primary)]"
             >
-              {/* Project Visual Banner */}
+              {/* Color swatch + logo — a compact echo of the hero card */}
               <div
-                className="h-36 relative overflow-hidden flex items-center justify-center"
+                className="relative grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-lg"
                 style={{
                   background: `linear-gradient(135deg, ${project.surfaceFrom ?? `${project.color}40`} 0%, ${project.surfaceTo ?? project.color} 100%)`
                 }}
               >
                 {project.logoUrl ? (
-                  <div
-                    className="flex h-20 items-center justify-center"
-                    style={{
-                      transform: `scale(${project.gridLogoScale ?? 1})`,
-                      transformOrigin: 'center'
-                    }}
-                  >
-                    <img
-                      src={project.logoUrl}
-                      alt={project.name}
-                      className="block h-14 w-auto max-w-[5.5rem] object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
+                  <img
+                    src={project.logoUrl}
+                    alt=""
+                    className="h-7 w-auto max-w-[2.25rem] object-contain drop-shadow transition-transform duration-300 group-hover:scale-110"
+                  />
                 ) : (
-                  <div className="text-white/30 text-6xl font-bold">
+                  <span className="text-sm font-bold text-white/40">
                     {project.name.substring(0, 2).toUpperCase()}
-                  </div>
+                  </span>
                 )}
               </div>
 
-              <div className="p-6">
-                {/* Header */}
-                <div className="flex justify-end items-start mb-3">
-                  <ArrowUpRight
-                    size={22}
-                    className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold mb-3 group-hover:text-[var(--accent-primary)] transition-colors">
+              {/* Meta */}
+              <div className="min-w-0 flex-1">
+                <h3 className="truncate font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-primary)]">
                   {project.name}
                 </h3>
-
-                {/* Description */}
-                <p className="text-[var(--text-secondary)] text-sm leading-relaxed mb-6 line-clamp-2 min-h-[2.5rem]">
-                  {t(project.descriptionKey, project.name + ' - Open source project')}
+                <p className="truncate text-xs text-[var(--text-secondary)]">
+                  {t(project.descriptionKey, project.name)}
                 </p>
-
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {project.tech.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs px-3 py-1.5 rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)] font-medium"
+                      className="rounded-full bg-[var(--bg-secondary)] px-2 py-0.5 text-[10px] font-medium text-[var(--text-muted)]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
+
+              {/* Arrow */}
+              <ArrowUpRight
+                size={18}
+                className="shrink-0 self-center text-[var(--text-muted)] transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--accent-primary)]"
+              />
             </a>
           ))}
         </div>
