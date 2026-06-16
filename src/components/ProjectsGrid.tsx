@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, Star } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { projects } from '../data/projects';
 
 export const ProjectsGrid: React.FC = () => {
@@ -61,17 +61,9 @@ export const ProjectsGrid: React.FC = () => {
 
               {/* Meta */}
               <div className="min-w-0 flex-1">
-                <div className="flex items-baseline gap-2">
-                  <h3 className="truncate font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-primary)]">
-                    {project.name}
-                  </h3>
-                  {project.stars > 0 && (
-                    <span className="flex shrink-0 items-center gap-1 text-[11px] text-[var(--text-muted)]">
-                      <Star size={11} className="fill-current" />
-                      {project.stars}
-                    </span>
-                  )}
-                </div>
+                <h3 className="truncate font-semibold text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-primary)]">
+                  {project.name}
+                </h3>
                 <p className="truncate text-xs text-[var(--text-secondary)]">
                   {t(project.descriptionKey, project.name)}
                 </p>
