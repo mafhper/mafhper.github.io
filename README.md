@@ -6,9 +6,8 @@ Portfolio site for Matheus Pereira, built with React, Vite, TypeScript, Tailwind
 
 - React 19
 - TypeScript
-- Vite 7
+- Vite 8
 - Tailwind CSS v4
-- Framer Motion
 - i18next
 
 ## Development
@@ -51,8 +50,8 @@ npm run dev
 src/
   components/   UI sections and reusable cards
   data/         project metadata rendered on the page
-  hooks/        render and motion helpers
   layouts/      layout shell
+  lib/          color and helper utilities
   locales/      translations
   styles/       shared theme tokens
 public/
