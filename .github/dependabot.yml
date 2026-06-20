@@ -1,13 +1,13 @@
 version: 2
 
 updates:
-  - package-ecosystem: "bun"
-    directory: "/"
+  - package-ecosystem: 'bun'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "tuesday"
-      time: "09:00"
-      timezone: "America/Sao_Paulo"
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '09:00'
+      timezone: 'America/Sao_Paulo'
     open-pull-requests-limit: 5
     cooldown:
       default-days: 5
@@ -17,17 +17,17 @@ updates:
     groups:
       bun-minor-and-patch:
         patterns:
-          - "*"
+          - '*'
         update-types:
-          - "minor"
-          - "patch"
+          - 'minor'
+          - 'patch'
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "tuesday"
-      time: "09:30"
-      timezone: "America/Sao_Paulo"
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '09:30'
+      timezone: 'America/Sao_Paulo'
     cooldown:
       default-days: 5
