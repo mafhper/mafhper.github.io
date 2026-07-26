@@ -29,6 +29,18 @@ export const projects: Project[] = [
     demoUrl: 'https://mafhper.github.io/aurawall'
   },
   {
+    id: 'dinopad',
+    name: 'Dinopad',
+    descriptionKey: 'projects.dinopad',
+    color: '#E5A84B',
+    tech: ['React', 'TypeScript', 'PWA'],
+    stars: 0,
+    surfaceFrom: '#11110D',
+    surfaceTo: '#E5A84B',
+    previewUrl: '/projects/dinopad/preview.webp',
+    demoUrl: 'https://mafhper.github.io/dinopad/'
+  },
+  {
     id: 'fremit',
     name: 'Fremit',
     descriptionKey: 'projects.fremit',
