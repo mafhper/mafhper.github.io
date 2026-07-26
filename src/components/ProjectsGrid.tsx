@@ -52,13 +52,6 @@ export const ProjectsGrid: React.FC = () => {
                     alt=""
                     className="h-7 w-auto max-w-[2.25rem] object-contain drop-shadow transition-transform duration-300 group-hover:scale-110"
                   />
-                ) : project.previewUrl ? (
-                  <img
-                    src={project.previewUrl}
-                    alt=""
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
                 ) : (
                   <span className="text-sm font-bold text-white/40">
                     {project.name.substring(0, 2).toUpperCase()}
