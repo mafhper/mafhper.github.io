@@ -35,9 +35,9 @@ export const projects: Project[] = [
     color: '#E5A84B',
     tech: ['React', 'TypeScript', 'PWA'],
     stars: 0,
+    logoUrl: '/projects/dinopad/logo.png',
     surfaceFrom: '#11110D',
     surfaceTo: '#E5A84B',
-    previewUrl: '/projects/dinopad/preview.webp',
     demoUrl: 'https://mafhper.github.io/dinopad/'
   },
   {
