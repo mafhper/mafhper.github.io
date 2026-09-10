@@ -46,7 +46,8 @@
     "markLee": "Desktop Markdown editor focused on flow, real-time preview, and polished PDF export.",
     "nebula": "Shader-first WebGL showcase and playground with reusable React GPU effects and curated presets.",
     "kaesKeideInspector": "Browser extension for inspecting CSS, HTML, accessibility, assets, and the full technology stack of any site.",
-    "sonaraHub": "Local creative studio to organize audio packages and generate reactive ambient videos from your albums, without uploads or cloud dependency."
+    "sonaraHub": "Local creative studio to organize audio packages and generate reactive ambient videos from your albums, without uploads or cloud dependency.",
+    "releaseCore": "Reusable GitHub Actions release protocol for web, browser extension, and desktop/Tauri projects."
   },
   "activity": {
     "title": "Coding Pulse",

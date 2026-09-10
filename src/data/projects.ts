@@ -130,6 +130,19 @@ export const projects: Project[] = [
     demoUrl: 'https://mafhper.github.io/personalnews'
   },
   {
+    id: 'release-core',
+    name: 'Release Core',
+    descriptionKey: 'projects.releaseCore',
+    color: '#5B8DEF',
+    tech: ['JavaScript', 'GitHub Actions', 'Shell'],
+    stars: 0,
+    logoUrl:
+      'https://raw.githubusercontent.com/mafhper/release-core/main/docs/images/logo/icon-512.png',
+    surfaceFrom: '#0A1628',
+    surfaceTo: '#2D5A8E',
+    demoUrl: 'https://github.com/mafhper/release-core'
+  },
+  {
     id: 'sonara-hub',
     name: 'Sonara Hub',
     descriptionKey: 'projects.sonaraHub',
