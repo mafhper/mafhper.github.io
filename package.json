@@ -51,6 +51,8 @@
     "brace-expansion": "^5.0.8",
     "flatted": "^3.4.2",
     "picomatch": "^4.0.4",
-    "postcss": "^8.5.24"
+    "postcss": "^8.5.24",
+    "browserslist": "4.28.7",
+    "nanoid": "3.3.18"
   }
 }
