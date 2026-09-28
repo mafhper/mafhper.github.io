@@ -1,0 +1,20 @@
+# Configuracao das notas de release geradas automaticamente.
+# O release-core monta o changelog chamando a API `generate-notes` do GitHub
+# (scripts/release-body.sh), e essa API respeita este arquivo.
+#
+# O que se exclui aqui e o que nao muda o site para quem visita. Um release de portfolio
+# tem poucos eventos e eles devem ler como "o que mudou na vitrine", nao "o que mudou na
+# ferramenta" — 15 entradas de bump de dependencia enterram a mudanca real.
+#
+# Seguranca da exclusao: estes labels sao aplicados pelo Dependabot. O PR #75, que alterou
+# `package.json` E `package-lock.json`, nao tem label nenhum — entao nenhum PR humano com
+# mudanca real de conteudo e escondido por esta regra.
+#
+# O label `dependabot`, usado no `.github/release.yml` do proprio release-core, NAO e
+# incluido aqui de proposito: ele nao existe neste repositorio, e um filtro que nao casa com
+# nada parece intencao em vez de descuido.
+changelog:
+  exclude:
+    labels:
+      - dependencies
+      - github_actions
