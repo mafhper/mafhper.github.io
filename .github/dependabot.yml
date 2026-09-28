@@ -1,7 +1,7 @@
 version: 2
 
 updates:
-  - package-ecosystem: 'bun'
+  - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'weekly'
@@ -15,7 +15,7 @@ updates:
       semver-minor-days: 7
       semver-major-days: 30
     groups:
-      bun-minor-and-patch:
+      npm-minor-and-patch:
         patterns:
           - '*'
         update-types:

@@ -12,37 +12,36 @@ Portfolio site for Matheus Pereira, built with React, Vite, TypeScript, Tailwind
 
 ## Development
 
-Preferred package manager: Bun.
-
-```powershell
-bun install
-bun run dev
-```
-
-Preview the production build:
-
-```powershell
-bun run build
-bun run preview
-```
-
-The preview server runs on `http://localhost:4300`.
-
-If needed, npm also works:
+Requires Node 24 (see `.nvmrc`) and npm 11.
 
 ```powershell
 npm install
 npm run dev
 ```
 
+Preview the production build:
+
+```powershell
+npm run build
+npm run preview
+```
+
+The preview server runs on `http://localhost:4300`.
+
+For a deterministic clean install (what CI runs):
+
+```powershell
+npm ci
+```
+
 ## Available Scripts
 
-- `bun run dev` / `npm run dev`: starts the Vite dev server
-- `bun run build` / `npm run build`: type-checks and builds for production
-- `bun run preview` / `npm run preview`: serves the production build locally
-- `bun run lint` / `npm run lint`: runs ESLint
-- `bun run type-check` / `npm run type-check`: runs TypeScript without emitting files
-- `bun run format` / `npm run format`: formats the codebase with Prettier
+- `npm run dev`: starts the Vite dev server
+- `npm run build`: type-checks and builds for production
+- `npm run preview`: serves the production build locally
+- `npm run lint`: runs ESLint
+- `npm run type-check`: runs TypeScript without emitting files
+- `npm run format`: formats the codebase with Prettier
 
 ## Project Structure
 
