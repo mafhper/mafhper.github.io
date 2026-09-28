@@ -31,3 +31,18 @@ updates:
       timezone: 'America/Sao_Paulo'
     cooldown:
       default-days: 5
+    groups:
+      # `codeql-action/init` escreve o arquivo de configuracao da analise e
+      # `codeql-action/analyze` e quem le esse arquivo. Separados, cada metade
+      # sozinha reprova com:
+      #
+      #   Loaded a configuration file for version 'X.Y.Z', but running version 'A.B.C'
+      #
+      # que foi exatamente o que aconteceu nos PRs #76 e #79 — e antes deles, no
+      # commit 8a3dcaf, cujo corpo registra "fix(ci): keep CodeQL init and analyze
+      # on the same release". O grupo faz as duas metades chegarem juntas, que e a
+      # unica forma de o PR passar. Sem ele, o repositorio paga a taxa de consertar
+      # a cada ciclo, a mao.
+      codeql:
+        patterns:
+          - 'github/codeql-action/*'
