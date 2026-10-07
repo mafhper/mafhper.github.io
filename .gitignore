@@ -1,53 +1,77 @@
+# Workspace privado
+.dev/
+_dev/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+QWEN.md
+KIMI.md
+.codex/
+.agents/
+.claude/
+.claude-code/
+.cursor/
+.gemini/
+.gemini-clipboard/
+.kimi/
+.qwen/
+.roo/
+.windsurf/
+
+# Sistema operacional
+desktop.ini
+Thumbs.db
+ehthumbs.db
+.DS_Store
+*.lnk
+
+# Dependencias
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+build/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+*.local
+
+# Temporarios
+*.tmp
+*.temp
+*.bak
+*.orig
+
 # Logs
-logs
+logs/
 *.log
+*.out
+*.err
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ambiente
+.env
+.env.*
+!*.example
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+# Editores
+.vscode/
+!/.vscode/
+/.vscode/*
+!/.vscode/extensions.json
+.idea/
+.cache/
 *.sw?
-
-# Build Analysis
+*.sublime-project
+*.sublime-workspace
 stats.html
-
-# Dev & Quality Tools (Guidelines)
-_dev/
-performance-reports/*
-.gemini/
 .agent/
-.agents/
 
-# Codex local private files
-AGENTS.md
-.codex/
-.dev/
-.claude/
-.qwen/
-.kimi/
-
-# Codex local private files
-.gemini-clipboard/
-.roo/
-.cursor/
-.windsurf/
-.claude-code/
-GEMINI.md
-CLAUDE.md
-QWEN.md
-KIMI.md
+# Sondas (rascunhos locais; `scripts/sonda-porta.ts` e versionado)
+/ports.ts
+/ports.mjs
