@@ -1,12 +1,29 @@
 import fs from 'fs';
 import path from 'path';
 
-const logDir = '_dev/logs';
+// Diretorio dos relatorios do Lighthouse. Pode vir como 1o argumento, da
+// variavel LIGHTHOUSE_LOG_DIR, ou do padrao historico "_dev/logs".
+const logDir = process.argv[2] || process.env.LIGHTHOUSE_LOG_DIR || '_dev/logs';
+
+if (!fs.existsSync(logDir)) {
+  console.error(`Diretorio de relatorios nao encontrado: ${logDir}`);
+  console.error('Uso: node analyze_report.mjs [diretorio-dos-relatorios]');
+  process.exit(1);
+}
+
 const files = fs
   .readdirSync(logDir)
   .filter((f) => f.endsWith('.json'))
   .sort();
-const latestFile = 'localhost_4200-20260208T010143.json';
+
+if (files.length === 0) {
+  console.error(`Nenhum relatorio .json em: ${logDir}`);
+  process.exit(1);
+}
+
+// O nome carrega o timestamp (localhost_<porta>-<AAAA...>.json), entao a
+// ordenacao lexicografica deixa o mais recente por ultimo.
+const latestFile = files[files.length - 1];
 
 console.log(`Analyzing: ${latestFile}`);
 const raw = fs.readFileSync(path.join(logDir, latestFile), 'utf-8');
