@@ -26,7 +26,7 @@ npm run build
 npm run preview
 ```
 
-The preview server runs on `http://localhost:4300`.
+The preview server runs on `http://localhost:4200` (dev: `http://localhost:5200`). Both ports are named and overridable via `PORT` / `PREVIEW_PORT`.
 
 For a deterministic clean install (what CI runs):
 
