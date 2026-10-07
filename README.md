@@ -1,6 +1,10 @@
 # mafhper.github.io
 
+![Homepage hero carousel cycling through the twelve featured projects](public/hero-carousel.webp)
+
 Portfolio site for Matheus Pereira, built with React, Vite, TypeScript, Tailwind CSS v4, and i18next.
+
+**Live at [mafhper.github.io](https://mafhper.github.io/)**
 
 ## Stack
 
