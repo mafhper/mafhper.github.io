@@ -136,8 +136,7 @@ export const projects: Project[] = [
     color: '#00E070',
     tech: ['JavaScript', 'GitHub Actions', 'Shell'],
     stars: 0,
-    logoUrl:
-      'https://raw.githubusercontent.com/mafhper/release-core/main/docs/images/logo/icon-512.png',
+    logoUrl: '/projects/release-core/logo.svg',
     surfaceFrom: '#0A1A0F',
     surfaceTo: '#1A7A4A',
     demoUrl: 'https://github.com/mafhper/release-core'
