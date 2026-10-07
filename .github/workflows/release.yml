@@ -36,7 +36,7 @@ jobs:
   release:
     permissions:
       contents: write
-    uses: mafhper/release-core/.github/workflows/release.yml@v1.2.5
+    uses: mafhper/release-core/.github/workflows/release.yml@v1.3.0
     with:
       matrix: '[{"os":"ubuntu-latest"}]'
       tag: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
