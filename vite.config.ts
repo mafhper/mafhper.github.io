@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 import { visualizer } from 'rollup-plugin-visualizer';
-import { findSafePort, formatPortFallback } from './scripts/sonda-porta';
+import { findSafePort, formatPortFallback } from './scripts/sonda-porta.ts';
 
 const DEV_PORT = Number(process.env.PORT) || 5200;
 const PREVIEW_PORT = Number(process.env.PREVIEW_PORT) || 4200;
 
-export default defineConfig(async () => {
+export default defineConfig(async (): Promise<UserConfig> => {
   // A sonda roda em top-level: `defineConfig` aceita callback async. Ela
   // escolhe a porta ANTES do bind, que e o que o `strictPort` nao cobre.
   const [devPort, previewPort] = await Promise.all([
