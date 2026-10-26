@@ -1,0 +1,4 @@
+# A sonda de porta não é escrita à mão: `tools/replicar-sonda.mjs` (dev-dashboard) grava
+# o corpo byte a byte a partir da fonte, e o Prettier reformatava o arquivo depois — o
+# `--check` do gate então acusava divergência só de espaço (MGI7).
+scripts/sonda-porta.ts
