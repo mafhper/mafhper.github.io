@@ -21,7 +21,7 @@ export default defineConfig(async (): Promise<UserConfig> => {
     console.warn(formatPortFallback(PREVIEW_PORT, previewPort, 'preview server'));
 
   return {
-    plugins: [react(), tailwindcss(), visualizer({ open: true })],
+    plugins: [react(), tailwindcss(), visualizer({ open: false })],
     base: '/',
     // `host: true` = 0.0.0.0. No Windows o bind tem sucesso mesmo com
     // `127.0.0.1:P` ocupado (medido em 2026-09-30 no icon-core), entao o Vite
