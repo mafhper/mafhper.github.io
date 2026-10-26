@@ -20,7 +20,8 @@ Requires Node 24 (see `.nvmrc`) and npm 11.
 
 > The npm version is pinned by the `packageManager` field in `package.json`. Run
 > `corepack enable` once and use `corepack npm ...` for installs, so the lockfile is not
-> rewritten by a different npm 11 minor version.
+> rewritten by a different npm 11 minor version. After `corepack enable`, the plain `npm`
+> command already resolves to the pinned version, so the examples below work as they are.
 
 ```powershell
 npm install

@@ -35,6 +35,9 @@ jobs:
       - name: Format check
         run: npm run format:check
 
+      # Custo assumido: um advisory `high` novo numa dependência transitiva deixa os PRs
+      # vermelhos até um override/bump. A via de correção já praticada neste repo é o bloco
+      # `overrides` do package.json (ver #98/#99), não baixar o nível de auditoria.
       - name: Audit known vulnerabilities
         run: npm audit --audit-level=high
 
