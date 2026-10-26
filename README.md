@@ -18,6 +18,10 @@ Portfolio site for Matheus Pereira, built with React, Vite, TypeScript, Tailwind
 
 Requires Node 24 (see `.nvmrc`) and npm 11.
 
+> The npm version is pinned by the `packageManager` field in `package.json`. Run
+> `corepack enable` once and use `corepack npm ...` for installs, so the lockfile is not
+> rewritten by a different npm 11 minor version.
+
 ```powershell
 npm install
 npm run dev
@@ -46,6 +50,7 @@ npm ci
 - `npm run lint`: runs ESLint
 - `npm run type-check`: runs TypeScript without emitting files
 - `npm run format`: formats the codebase with Prettier
+- `npm run format:check`: verifies formatting without writing changes
 
 ## Project Structure
 
@@ -65,4 +70,5 @@ public/
 
 - The homepage is localized in Portuguese, English, and Spanish.
 - Project cards link to live demos or GitHub repositories.
-- `stats.html` is kept for bundle inspection and optimization passes.
+- `stats.html` is generated locally by the production build (Rollup visualizer) and is
+  gitignored; inspect it after `npm run build` for bundle analysis.
