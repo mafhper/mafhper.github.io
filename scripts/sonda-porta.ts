@@ -162,10 +162,7 @@ function portaEfemeraUtilizavel(host: string): Promise<number | null> {
  * @param {{ host?: string, tentativas?: number, rotulo?: string }} [opcoes]
  * @returns {Promise<number>}
  */
-export async function findSafePort(
-  preferida: number,
-  opcoes: { host?: string; tentativas?: number; rotulo?: string } = {}
-): Promise<number> {
+export async function findSafePort(preferida: number, opcoes: { host?: string; tentativas?: number; rotulo?: string } = {}): Promise<number> {
   const { host = '127.0.0.1', tentativas = 20, rotulo = 'dev server' } = opcoes;
 
   for (let i = 0; i < tentativas; i += 1) {
@@ -192,11 +189,7 @@ export async function findSafePort(
  * Um dev que ve "5174" sem saber por que reinicia o terminal achando que
  * algo quebrou.
  */
-export function formatPortFallback(
-  de: number,
-  para: number,
-  rotulo: string = 'dev server'
-): string {
+export function formatPortFallback(de: number, para: number, rotulo: string = 'dev server'): string {
   return (
     `\n  Porta ${de} ja esta servindo outra coisa em 127.0.0.1 ` +
     `(outro projeto da frota, ou um servico local).\n` +
@@ -236,15 +229,12 @@ export function describePortTaken(port: number, host: string = '127.0.0.1'): str
  *
  * @throws {Error} com a mensagem de `describePortTaken`
  */
-export async function assertPortFree(
-  port: number,
-  options: { host?: string } = {}
-): Promise<number> {
+export async function assertPortFree(port: number, options: { host?: string } = {}): Promise<number> {
   const { host = '127.0.0.1' } = options;
   if (!isPortUsable(port)) {
     throw new Error(
       `porta ${port} esta na lista de "bad ports" do padrao WHATWG: o fetch rejeita ` +
-        `antes de conectar. Escolha outra.`
+      `antes de conectar. Escolha outra.`
     );
   }
   if (!(await isPortFree(port, host))) {
